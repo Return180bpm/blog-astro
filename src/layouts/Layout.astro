@@ -37,7 +37,7 @@ const fileName = ((): string => {
             </ul>
         ))} -->
     </div>
-		<img src={`/${fileName}.png`} alt="">
+		<img src={`/${fileName}.png`} alt={content.imgAlt}>
 		<slot />
 	</body>
 </html>
@@ -64,8 +64,15 @@ const fileName = ((): string => {
 		max-width: 100%;
 	}
 
-	pre {
-		max-width: 50%;
+	:global(li > p) {
+		padding: 24px 24px;
+		color: darkgreen;
+		background-color: snow;
+		
+	}
+	:global(p > em) {
+		color: slategray;
+		margin-left: 24px;
 	}
 	:global(h1) {
 		font-size: var(--font-size-xl);
