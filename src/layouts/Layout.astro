@@ -1,9 +1,23 @@
 ---
+interface BlogPost {
+	file: string,
+	layout: string,
+	title: string,
+	author: string,
+	imgAlt: string
+}
 export interface Props {
-	title: string;
+	content?: BlogPost
 }
 
-const { title } = Astro.props as Props;
+const { content } = Astro.props as Props;
+const fileName = ((): string => {
+	const indexOfLastBackSlash = content.file.lastIndexOf('/')
+	const indexOfLastColon = content.file.lastIndexOf('.')
+	const fileName = content.file.slice(indexOfLastBackSlash+1, indexOfLastColon)
+	return fileName
+})()
+
 ---
 
 <!DOCTYPE html>
@@ -12,9 +26,18 @@ const { title } = Astro.props as Props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>{title}</title>
+		<title>{content.title}</title>
 	</head>
 	<body>
+    <div>
+        <h1> {fileName} </h1>
+        <!-- {Object.keys(content).map((key, i) =>(
+            <ul>
+                <li>{key}: {content[key]}</li>
+            </ul>
+        ))} -->
+    </div>
+		<img src={`/${fileName}.png`} alt="">
 		<slot />
 	</body>
 </html>
@@ -38,8 +61,12 @@ const { title } = Astro.props as Props;
 
 	body {
 		margin: 0;
+		max-width: 100%;
 	}
 
+	pre {
+		max-width: 50%;
+	}
 	:global(h1) {
 		font-size: var(--font-size-xl);
 	}
