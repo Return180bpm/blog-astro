@@ -6,7 +6,7 @@ imgAlt: "A squarish light image with a light background, tearing open to reveal 
 ---
 
 -   Set up my blog with [Astro](https://astro.build/)\
-    _omg and it worked out of the box_
+    _omg it worked out of the box_
 
 -   Read about [SSG and SSR](https://allthecode.co/blog/post/ssr-vs-ssg-vs-spa-what-does-it-all-mean) (web paradigms)\
     _And stored my newly found knowledge in Notion (aka filing away :)_
