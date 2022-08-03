@@ -7,7 +7,7 @@ interface BlogPost {
 	imgAlt: string
 }
 export interface Props {
-	content?: BlogPost
+	content: BlogPost
 }
 
 const { content } = Astro.props as Props;

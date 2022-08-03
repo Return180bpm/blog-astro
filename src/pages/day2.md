@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Layout.astro
+layout: ../layouts/BlogPost.astro
 title: Day 2
 author: Tom Szwaja
 imgAlt: ""
