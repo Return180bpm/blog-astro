@@ -1,5 +1,5 @@
 ---
-author: Tom Szwaja
+date:
 imgAlt: ''
 ---
 

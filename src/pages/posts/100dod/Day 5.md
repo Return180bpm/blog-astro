@@ -1,6 +1,6 @@
 ---
 title:
-author: Tom Szwaja
+date:
 imgAlt: ''
 ---
 

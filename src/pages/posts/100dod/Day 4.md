@@ -1,6 +1,6 @@
 ---
 title: Tiny important steps
-author: Tom Szwaja
+date:
 imgAlt: ''
 ---
 
