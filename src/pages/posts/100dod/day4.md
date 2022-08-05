@@ -5,7 +5,7 @@ author: Tom Szwaja
 imgAlt: ''
 ---
 
--   Designed card for day 4
+-   Designed card for day 4\
     _This time it was a 1-pomodor-sprint. I wanna keep it loose like this_
 
 -   Research: looked into CSS frameworks Windi and Uno
