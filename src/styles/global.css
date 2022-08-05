@@ -17,4 +17,7 @@
 		font-style: normal;
 		font-display: swap;
 	}
+	ul {
+		@apply px-4 border border-stone-600;
+	}
 }
