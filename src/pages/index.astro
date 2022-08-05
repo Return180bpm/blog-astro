@@ -13,8 +13,10 @@ const posts = await Astro.glob('../pages/posts/100dod/*.md')
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>Bowl of Letters</title>
 	</head>
-	<body class="px-4 font-sans text-stone-600 bg-amber-50">
-		<h1 class="text-2xl mt-8 mb-8 border-b border-b-stone-600 ">
+	<body
+		class="grid place-content-center px-4 font-sans text-stone-600 bg-amber-50"
+	>
+		<h1 class="text-4xl mt-16 mb-2 border-b border-b-stone-600 ">
 			100 Days of Design
 		</h1>
 		<main>
@@ -36,5 +38,10 @@ const posts = await Astro.glob('../pages/posts/100dod/*.md')
 				<a href="_blank">Twitter</a>
 			</address>
 		</footer>
+		<style>
+			ul {
+				border: 1px solid black;
+			}
+		</style>
 	</body>
 </html>
