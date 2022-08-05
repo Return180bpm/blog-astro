@@ -6,14 +6,14 @@ const posts = await Astro.glob('../pages/posts/100dod/*.md')
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="font-sans text-stone-600 bg-amber-50">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>Bowl of Letters</title>
 	</head>
-	<body>
+	<body class="font-sans text-stone-600 bg-amber-50">
 		<main>
 			{posts.map(({ frontmatter, file, Content }) => (
 				<BlogPost
@@ -25,5 +25,13 @@ const posts = await Astro.glob('../pages/posts/100dod/*.md')
 				</BlogPost>
 			))}
 		</main>
+		<footer
+			class="fixed left-0 bottom-0  w-full flex items-end bg-inherit px-8 pb-4 pt-2"
+		>
+			<address class="w-full flex justify-between">
+				<span>Tom Szwaja</span>
+				<a href="_blank">Twitter</a>
+			</address>
+		</footer>
 	</body>
 </html>
