@@ -12,6 +12,8 @@ imgAlt: ''
 
 -   Read up on some of the basic semantic markup elements like `<article>`. Also `<time>`
 
+-   Tidied up my Notion project page for this blog
+
 It's been a day. A day at the computer. A day of thousand little lessons. I must have changed course a dozen times today - realizing that what I want to do takes much more effort and care than I had thought (like converting dates in JavaScript).
 
 In the end, I'm pretty happy with the result - the page looks presentable and all that's left for this iteration is to change the favicon and maybe buy a domain.
