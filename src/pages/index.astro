@@ -5,17 +5,25 @@ import '../styles/global.css'
 const posts = await Astro.glob('../pages/posts/100dod/*.md')
 ---
 
-<head>
-	<meta charset="UTF-8" />
-</head>
-<main>
-	{posts.map(({ frontmatter, file, Content }) => (
-		<BlogPost
-			title={frontmatter.title}
-			file={file}
-			imgAlt={frontmatter.imgAlt}
-		>
-			<Content />
-		</BlogPost>
-	))}
-</main>
+<!DOCTYPE html>
+<html lang="en" class="font-sans text-stone-600 bg-amber-50">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<title>Bowl of Letters</title>
+	</head>
+	<body>
+		<main>
+			{posts.map(({ frontmatter, file, Content }) => (
+				<BlogPost
+					title={frontmatter.title}
+					file={file}
+					imgAlt={frontmatter.imgAlt}
+				>
+					<Content />
+				</BlogPost>
+			))}
+		</main>
+	</body>
+</html>
