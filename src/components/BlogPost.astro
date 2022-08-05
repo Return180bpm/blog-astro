@@ -21,27 +21,18 @@ const fileName = ((): string => {
 })()
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="font-sans">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div>
-			<h1 class="font-sans text-3xl">{fileName}</h1>
-			<!-- {Object.keys(content).map((key, i) =>(
-            <ul>
-                <li>{key}: {content[key]}</li>
-            </ul>
-        ))} -->
-		</div>
-		<img src={`/${fileName}.png`} alt={imgAlt} />
-		<slot />
-		<style>
+<div>
+	{
+		title
+		? (
+			<h1 class="font-sans text-3xl">{title}</h1>
+			<h2>{fileName}</h2>
+			)
+			: <h1 class="font-sans text-3xl">{fileName}</h1>
+	}
+</div>
+<img src={`/${fileName}.png`} alt={imgAlt} />
+<slot />
+<style>
 
-		</style>
-	</body>
-</html>
+</style>
