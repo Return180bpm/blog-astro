@@ -19,6 +19,7 @@ const fileName = ((): string => {
 	const fileName = file.slice(indexOfLastBackSlash + 1, indexOfLastColon)
 	return fileName
 })()
+
 ---
 
 <article>
@@ -33,11 +34,9 @@ const fileName = ((): string => {
 	}
 	<slot />
 	<footer>
-		<p>
-			Posted on
-			<time datetime="2015-05-16 19:00">May 16</time>
-			by Lisa.
-		</p>
+		<span class="italic border-t">
+			Written by Tom
+		</span>
 	</footer>
 </article>
 
