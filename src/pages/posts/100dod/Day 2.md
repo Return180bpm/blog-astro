@@ -14,6 +14,4 @@ imgAlt: "A squarish light image with a light background, tearing open to reveal 
 
 -   Started writing down the things that I might do in these 100 days
 
----
-
 A lot of techy stuff. It's been 2 days of setup - researching SSGs, trying them out, doing some frustrates. But it's done. I feel like I can work with Astro. I see some Figma designing and CSS styling in my future.

@@ -9,11 +9,11 @@ imgAlt: ''
 
 -   Research: looked into CSS frameworks Windi and Uno
 
----
-
 Today was a low energy day due to sleep deprivation. That's not totally a bad thing. I felt too tired to stress, too slow to rush like usual. It's nice to have a day where I work in a chill way towards some realistic goals. In fact, I got as many todo-items checked off today as ever (mostly setting up my dev ennvironment, going from plugin to plugin) My girlfriend said
 
-> _you're doing tiny important steps_. 💚
+> _you're doing tiny important steps_.
+
+💚
 
 For context: as I write this, the blog is still not online. Well, it technically is, but I haven't announced it yet. It looks, well, not very good. It's barely a webpage, but still - I'm almost ready to give it the old shoutout. I just wanna make it look coherent and a little prettier. I've got my designs in Figma, they just have to be implemented. So I was researching CSS frameworks/engines/preprocessors today.
 
