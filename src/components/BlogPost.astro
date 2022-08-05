@@ -22,7 +22,7 @@ const fileName = ((): string => {
 const title = Astro.props.title || fileName
 ---
 
-<article class="mt-32 flex flex-col gap-4 px-4">
+<article class="prose prose-stone mt-64 first:mt-16 flex flex-col gap-0 px-4">
 	<h2 class="font-sans text-3xl" id={title}>
 		<a href={`#${title}`}>{title}</a>
 	</h2>
@@ -32,11 +32,7 @@ const title = Astro.props.title || fileName
 	<img src={`/${fileName}.png`} alt={imgAlt} />
 
 	<slot />
-	<footer>
-		<span class="italic border-t"> Written by Tom</span>
+	<footer class="pt-2 italic border-t">
+		<span> Written by Tom</span>
 	</footer>
 </article>
-
-<style>
-
-</style>
