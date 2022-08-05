@@ -12,31 +12,28 @@ export interface Props {
 	imgAlt: string
 }
 
-const { title, file, imgAlt } = Astro.props as Props
+const { file, imgAlt } = Astro.props as Props
 const fileName = ((): string => {
 	const indexOfLastBackSlash = file.lastIndexOf('/')
 	const indexOfLastColon = file.lastIndexOf('.')
 	const fileName = file.slice(indexOfLastBackSlash + 1, indexOfLastColon)
 	return fileName
 })()
-
+const title = Astro.props.title || fileName
 ---
 
-<article>
+<article class="mt-32 flex flex-col gap-4 px-4">
+	<h2 class="font-sans text-3xl" id={title}>
+		<a href={`#${title}`}>{title}</a>
+	</h2>
+	{Astro.props.title ? (
+		<h3 class="text-xl text-stone-500">{fileName}</h3>
+	) : null}
 	<img src={`/${fileName}.png`} alt={imgAlt} />
-	{
-		title
-		? (
-			<h1 class="font-sans text-3xl">{title}</h1>
-			<h2>{fileName}</h2>
-			)
-			: <h1 class="font-sans text-3xl">{fileName}</h1>
-	}
+
 	<slot />
 	<footer>
-		<span class="italic border-t">
-			Written by Tom
-		</span>
+		<span class="italic border-t"> Written by Tom</span>
 	</footer>
 </article>
 
