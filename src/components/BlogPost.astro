@@ -10,9 +10,10 @@ export interface Props {
 	title: string
 	file: string
 	imgAlt: string
+	date: string
 }
 
-const { file, imgAlt } = Astro.props as Props
+const { file, imgAlt, date } = Astro.props as Props
 const fileName = ((): string => {
 	const indexOfLastBackSlash = file.lastIndexOf('/')
 	const indexOfLastColon = file.lastIndexOf('.')
@@ -33,6 +34,6 @@ const title = Astro.props.title || fileName
 
 	<slot />
 	<footer class="pt-2 italic border-t">
-		<span> Written by Tom</span>
+		<span> Written by Tom on {date}</span>
 	</footer>
 </article>
