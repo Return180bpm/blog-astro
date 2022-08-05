@@ -1,7 +1,6 @@
 ---
-title: Day 3
 author: Tom Szwaja
-imgAlt: ""
+imgAlt: ''
 ---
 
 -   Designed cards for day 2 and 3\

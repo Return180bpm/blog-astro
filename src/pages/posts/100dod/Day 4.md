@@ -1,6 +1,5 @@
 ---
 title: Tiny important steps
-subheading: Day 4
 author: Tom Szwaja
 imgAlt: ''
 ---
