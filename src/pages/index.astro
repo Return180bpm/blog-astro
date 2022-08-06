@@ -14,12 +14,12 @@ const posts = await Astro.glob('../pages/posts/100dod/*.md')
 		<title>Bowl of Letters</title>
 	</head>
 	<body
-		class="grid place-content-center px-4 font-sans text-stone-600 bg-amber-50"
+		class="grid place-content-center font-sans text-stone-600 bg-amber-50"
 	>
-		<h1 class="text-4xl mt-16 mb-2 border-b border-b-stone-600 ">
-			100 Days of Design
-		</h1>
-		<main class="pb-10">
+		<main class="px-4 pb-10">
+			<h1 class="text-4xl mt-16 mb-2 border-b border-b-stone-600 ">
+				100 Days of Design
+			</h1>
 			{posts.map(({ frontmatter, file, Content }) => (
 				<BlogPost
 					title={frontmatter.title}
@@ -31,12 +31,12 @@ const posts = await Astro.glob('../pages/posts/100dod/*.md')
 				</BlogPost>
 			))}
 		</main>
-		<footer
-			class="fixed left-0 bottom-0  w-full flex items-end bg-inherit px-8 pb-4 pt-2"
-		>
-			<address class="w-full flex justify-end gap-4">
-				<span>Tom Szwaja</span>
-				<a href="_blank">Twitter</a>
+		<footer class="w-full text-amber-50 bg-emerald-900 px-8 pb-8 pt-6">
+			<address class="prose-lg w-full flex items-end gap-4">
+				<span>Created by Tom Szwaja</span>
+				<a href="https://twitter.com/TomSzwa" class="ml-auto underline">
+					<span>Say hey on Twitter</span>
+				</a>
 			</address>
 		</footer>
 		<style>
