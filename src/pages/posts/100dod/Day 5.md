@@ -1,6 +1,6 @@
 ---
 title: Long Day
-date: Saturday, 5th of August 2022
+date: Friday, 5th of August 2022
 imgAlt: ''
 ---
 
