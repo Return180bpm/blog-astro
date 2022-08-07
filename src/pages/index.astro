@@ -17,9 +17,11 @@ const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
 		<title>tom's blobs</title>
 	</head>
 	<body
-		class="grid place-content-center prose-custom prose-xl lg:prose-2xl prose-stone font-sans text-stone-600 bg-dod-week1-babypowder"
+		class="grid place-content-center font-sans text-stone-600 bg-dod-week1-babypowder"
 	>
-		<main class="mt-16 px-4 pb-10 ">
+		<main
+			class="mt-16 px-4 pb-24 prose-custom prose-xl lg:prose-2xl prose-stone"
+		>
 			<h1 class="mb-2  border-b border-b-stone-600 ">
 				100 Days of Design
 			</h1>
@@ -34,14 +36,23 @@ const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
 				</BlogPost>
 			))}
 		</main>
-		<footer class="w-full text-amber-50 bg-stone-900 px-8 pb-8 pt-6">
-			<address class="prose-lg w-full flex items-end gap-4">
-				<span>Created by Tom Szwaja</span>
+		<footer
+			class="w-full flex flex-col gap-8 bg-dod-week1-burgundy px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
+		>
+			<a
+				href="https://www.100daysofx.com/"
+				class=" text-dod-week1-babypowder"
+			>
+				The 100-Days-Of-X-Thing has a very official site
+			</a>
+			<div class="h-0 border border-b-dod-week1-babypowder"></div>
+			<address class="flex flex-col-reverse items-end">
+				<span class="text-stone-300">Created by Tom Szwaja</span>
 				<a
 					href="https://twitter.com/TomSzwa"
-					class="ml-auto text-amber-50"
+					class="text-dod-week1-babypowder"
 				>
-					Say hey on Twitter
+					Tweet with me
 				</a>
 			</address>
 		</footer>
