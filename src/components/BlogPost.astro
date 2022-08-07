@@ -23,10 +23,8 @@ const fileName = ((): string => {
 const title = Astro.props.title || fileName
 ---
 
-<article
-	class="prose prose-xl lg:prose-2xl prose-stone mt-64 first-of-type:mt-16 flex flex-col gap-0 px-4"
->
-	<h2 class="font-sans text-3xl" id={title}>
+<article class="mt-64 first-of-type:mt-16 flex flex-col gap-0 px-4">
+	<h2 id={title}>
 		<a href={`#${title}`}>{title}</a>
 	</h2>
 	{Astro.props.title ? (
