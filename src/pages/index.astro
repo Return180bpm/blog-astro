@@ -17,11 +17,9 @@ const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
 		<title>tom's blobs</title>
 	</head>
 	<body
-		class="grid place-content-center font-sans text-stone-600 bg-dod-week1-babypowder"
+		class="grid place-content-center prose-custom prose-xl lg:prose-2xl prose-stone font-sans text-stone-600 bg-dod-week1-babypowder"
 	>
-		<main
-			class="mt-16 px-4 pb-10 prose-custom prose-xl lg:prose-2xl prose-stone"
-		>
+		<main class="mt-16 px-4 pb-10 ">
 			<h1 class="mb-2  border-b border-b-stone-600 ">
 				100 Days of Design
 			</h1>
@@ -39,8 +37,11 @@ const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
 		<footer class="w-full text-amber-50 bg-stone-900 px-8 pb-8 pt-6">
 			<address class="prose-lg w-full flex items-end gap-4">
 				<span>Created by Tom Szwaja</span>
-				<a href="https://twitter.com/TomSzwa" class="ml-auto underline">
-					<span>Say hey on Twitter</span>
+				<a
+					href="https://twitter.com/TomSzwa"
+					class="ml-auto text-amber-50"
+				>
+					Say hey on Twitter
 				</a>
 			</address>
 		</footer>
