@@ -4,12 +4,15 @@ module.exports = {
 		es2022: true,
 		browser: true
 	},
-	plugins: ['jsx-a11y'],
+	plugins: ['@typescript-eslint', 'jsx-a11y'],
 	extends: [
 		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
 		'plugin:astro/recommended',
 		'plugin:jsx-a11y/recommended'
 	],
+	parser: '@typescript-eslint/parser',
+
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module'
