@@ -43,3 +43,15 @@ export const formatDateToCustom = (dateFromMarkdown: string): string => {
 
 	return `${weekday}, ${monthName} ${formatOrdinal(day)} ${year}`
 }
+
+// other
+
+import { MarkdownInstance } from 'astro'
+import { Frontmatter } from '@/types'
+export const sortByDate = (posts: MarkdownInstance<Frontmatter>[]) => {
+	return posts.sort(
+		(a, b) =>
+			new Date(b.frontmatter.date).valueOf() -
+			new Date(a.frontmatter.date).valueOf()
+	)
+}
