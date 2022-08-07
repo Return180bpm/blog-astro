@@ -1,6 +1,6 @@
 ---
 title: Blur
-date: Saturday, 6th of August 2022
+date: 7.8.2022
 imgAlt: ''
 ---
 

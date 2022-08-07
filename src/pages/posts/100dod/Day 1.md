@@ -1,6 +1,6 @@
 ---
 title:
-date:
+date: 1.8.2022
 imgAlt: "A squarish image with a light background and dark horizontal lines converging as if looking at the horizon. A reddish sun is rising. Text: In the upper left 'Day 1', in the lower right '100 Days of Design'"
 ---
 

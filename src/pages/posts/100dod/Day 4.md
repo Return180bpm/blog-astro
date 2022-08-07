@@ -1,6 +1,6 @@
 ---
 title: Tiny important steps
-date:
+date: 4.8.2022
 imgAlt: ''
 ---
 
