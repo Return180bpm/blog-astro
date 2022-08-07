@@ -6,6 +6,7 @@
 // 	author: string
 // 	imgAlt: string
 // }
+import { formatDateToCustom } from '@/utils'
 export interface Props {
 	title: string
 	file: string
@@ -34,6 +35,6 @@ const title = Astro.props.title || fileName
 
 	<slot />
 	<footer class="pt-2 italic border-t">
-		<span> Written by Tom on {date}</span>
+		<span> Written by Tom on {formatDateToCustom(date)}</span>
 	</footer>
 </article>
