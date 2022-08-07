@@ -19,8 +19,10 @@ const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
 	<body
 		class="grid place-content-center font-sans text-stone-600 bg-dod-week1-babypowder"
 	>
-		<main class="px-4 pb-10 prose-custom prose-xl lg:prose-2xl prose-stone">
-			<h1 class="mt-16 mb-2  border-b border-b-stone-600 ">
+		<main
+			class="mt-16 px-4 pb-10 prose-custom prose-xl lg:prose-2xl prose-stone"
+		>
+			<h1 class="mb-2  border-b border-b-stone-600 ">
 				100 Days of Design
 			</h1>
 			{sortByDate(posts).map(({ frontmatter, file, Content }) => (
