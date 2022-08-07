@@ -1,8 +1,11 @@
 ---
 import BlogPost from '@/components/BlogPost.astro'
+import { Frontmatter } from '@/types'
+import { sortByDate } from '@/utils'
+
 import '../styles/global.css'
 
-const posts = await Astro.glob('../pages/posts/100dod/*.md')
+const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
 ---
 
 <!DOCTYPE html>
@@ -20,7 +23,7 @@ const posts = await Astro.glob('../pages/posts/100dod/*.md')
 			<h1 class="mt-16 mb-2  border-b border-b-stone-600 ">
 				100 Days of Design
 			</h1>
-			{posts.map(({ frontmatter, file, Content }) => (
+			{sortByDate(posts).map(({ frontmatter, file, Content }) => (
 				<BlogPost
 					title={frontmatter.title}
 					file={file}
