@@ -29,7 +29,12 @@ const formatOrdinal = (n) => {
 	const suffix = suffixes.get(rule)
 	return `${n}${suffix}`
 }
-// in: 'dd.mm.yyyy'
+// in: 'd.m.yyyy'
+const makeDateObj = (myDate: string): Date => {
+	const [day, month, year] = myDate.split('.')
+	return new Date(Number(year), Number(month) - 1, Number(day))
+}
+// in: 'dd.m.yyyy'
 // out: Saturday, August 6th 2022
 export const formatDateToCustom = (dateFromMarkdown: string): string => {
 	const [day, month, year] = dateFromMarkdown.split('.')
@@ -51,7 +56,7 @@ import { Frontmatter } from '@/types'
 export const sortByDate = (posts: MarkdownInstance<Frontmatter>[]) => {
 	return posts.sort(
 		(a, b) =>
-			new Date(b.frontmatter.date).valueOf() -
-			new Date(a.frontmatter.date).valueOf()
+			makeDateObj(b.frontmatter.date).valueOf() -
+			makeDateObj(a.frontmatter.date).valueOf()
 	)
 }
