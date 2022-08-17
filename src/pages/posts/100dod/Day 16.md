@@ -1,5 +1,5 @@
 ---
-title: My Whole Life Has Been a Failure and I Am Nothing
+title: The CV Shuffle
 date: 16.8.2022
 imgAlt:
 ---
