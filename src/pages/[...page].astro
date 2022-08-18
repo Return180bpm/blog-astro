@@ -5,7 +5,14 @@ import { sortByDate } from '@/utils'
 
 import '../styles/global.css'
 
-const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
+// const posts = await Astro.glob<Frontmatter>('./posts/100dod/*.md')
+
+export async function getStaticPaths({ paginate }) {
+	const unsortedPosts = await Astro.glob<Frontmatter>('./posts/100dod/*.md')
+	const sortedPosts = sortByDate(unsortedPosts)
+	return paginate(sortedPosts, { pageSize: 7 })
+}
+const { page } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -17,15 +24,13 @@ const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
 		<title>tom's blobs</title>
 	</head>
 	<body
-		class="grid place-content-center font-sans text-stone-600 bg-dod-week1-babypowder"
+		class="grid place-content-center gap-12 font-sans text-stone-600 bg-dod-week1-babypowder"
 	>
-		<main
-			class="mt-16 px-4 pb-24 prose-custom prose-xl lg:prose-2xl prose-stone"
-		>
+		<main class="mt-16 px-4 prose-custom prose-xl lg:prose-2xl prose-stone">
 			<h1 class="mb-2  border-b border-b-stone-600 ">
 				100 Days of Design
 			</h1>
-			{sortByDate(posts).map(({ frontmatter, file, Content }) => (
+			{page.data.map(({ frontmatter, file, Content }) => (
 				<BlogPost
 					title={frontmatter.title}
 					file={file}
@@ -36,6 +41,14 @@ const posts = await Astro.glob<Frontmatter>('../pages/posts/100dod/*.md')
 				</BlogPost>
 			))}
 		</main>
+
+		<nav
+			class="w-full flex justify-between bg-amber-100 px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone rounded-3xl"
+		>
+			{page.url.next ? <a href={page.url.next}>Older Posts</a> : null}
+			{page.url.prev ? <a href={page.url.prev}>Newer Posts</a> : null}
+		</nav>
+
 		<footer
 			class="w-full flex flex-col gap-8 bg-dod-week1-burgundy px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
 		>
