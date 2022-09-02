@@ -1,7 +1,8 @@
 ---
 title: Accruements
 date: 26.8.2022
-imgAlt:
+imgAlt: >
+    A list of days to the left: Day 15, Day 16... Day 20. These have a checkmark to the right. On the top is Day 21, unchecked. Thick gold-colored bars frame the sides of the list. A slightly darker, wheat-colored bar runs through the middle of the list from top to bottom, filling the space between the days and the checkmarks. Text, extending through this bar into a blue bar at the bottom: 100 Days of Design.
 ---
 
 -   **Implemented a Figma-design in my grocery list webapp**
