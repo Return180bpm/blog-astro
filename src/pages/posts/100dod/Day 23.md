@@ -2,6 +2,7 @@
 title:
 date: 5.9.2022
 imgAlt:
+hasImg: false
 ---
 
 -   Researched _caching on the web_

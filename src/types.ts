@@ -3,4 +3,5 @@ export interface Frontmatter {
 	file: string
 	imgAlt: string
 	date: string
+	hasImg?: boolean
 }
