@@ -1,7 +1,8 @@
 ---
 title: Running Behind In Small Steps
 date: 15.8.2022
-imgAlt:
+imgAlt: >
+    Three red and yellow dancing flame-like shapes on a black background extending upwards towards a purple circle with the text '100 Days of Design, Day 15'.
 ---
 
 -   Read through more of the Material Design guidelines
