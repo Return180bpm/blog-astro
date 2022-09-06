@@ -13,7 +13,7 @@ I feel isolated, overwhelmed and this results in a feeling of _treading water_. 
 
 Sometimes I feel like I'm drowning in stuff, and maintaining this blog - writing the posts, creating the daycards - is like the cherry on top, [if the cherry on top was made of tungsten](https://www.youtube.com/watch?v=C7EocA1hsCU)
 
-I feel like I'm not really _doing much designing_. And what I _see others doing and calling design_ interests me less and less - designing another UI for another app.
+I feel like I'm not really _doing much designing_. And what I see others doing and calling design interests me less and less - designing another UI for another app.
 
 I think all of these things had been brewing under the surface for a while now, but they really bubbled up last week, when I read a few big-picture articles about design, especially some of Mike Monteiro's. (Like [this one](https://medium.com/thinking-design/who-do-designers-really-work-for-43192dc09a27?source=list-eebfd33206ee--------0-------6599f19bd011---------------------) that reframes designing as a service for the people who are going to be using the product, instead of a service for a client.)
 
