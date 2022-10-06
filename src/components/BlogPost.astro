@@ -5,7 +5,7 @@ export interface Props {
 	file: string
 	imgAlt: string
 	date: string
-	hasImg: boolean | undefined
+	hasImg?: boolean | undefined
 }
 
 const { file, imgAlt, date } = Astro.props as Props
