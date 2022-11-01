@@ -26,7 +26,7 @@ A more fundamental confusion mixed in here: what do I use as a compass, if I can
 
 ---
 
-## Addendum: A muddy stuckness
+### Addendum: A muddy stuckness
 
 I've been here before. The pattern I see so far:
 
