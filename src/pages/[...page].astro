@@ -15,11 +15,12 @@ const nextUrl = page.url.next
 ---
 
 <BaseLayout>
-	<main class="mt-16 px-4 prose-custom prose-xl lg:prose-2xl prose-stone">
+	<main class="px-4 prose-custom prose-xl lg:prose-2xl prose-stone">
 		{page.data.map(
 			({
 				frontmatter: { title, imgAlt, date, hasImg },
 				file,
+				url,
 				Content
 			}) => (
 				<BlogPost
@@ -28,6 +29,7 @@ const nextUrl = page.url.next
 					imgAlt={imgAlt}
 					date={date}
 					hasImg={hasImg}
+					url={url}
 				>
 					<Content />
 				</BlogPost>
