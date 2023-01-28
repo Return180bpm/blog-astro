@@ -15,7 +15,6 @@ module.exports = {
 			babypowder: '#FDFFFA',
 			red: '#FD7D94',
 			canary: '#FFFA98'
-
 		},
 		// extend: {
 		// 	typography: (theme) => ({

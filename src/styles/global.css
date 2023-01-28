@@ -4,11 +4,8 @@
 
 .text-outline {
 	color: hsl(var(--light));
-	text-shadow:
-		-1px -1px 0 hsl(var(--dark)),
-		1px -1px 0 hsl(var(--dark)),
-		-1px 1px 0 hsl(var(--dark)),
-		1px 1px 0 hsl(var(--dark));
+	text-shadow: -1px -1px 0 hsl(var(--dark)), 1px -1px 0 hsl(var(--dark)),
+		-1px 1px 0 hsl(var(--dark)), 1px 1px 0 hsl(var(--dark));
 }
 
 @layer base {
