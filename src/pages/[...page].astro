@@ -46,18 +46,20 @@ const { page } = Astro.props
 		</main>
 
 		<nav
-			class="w-full flex flex-col justify-center items-center gap-6 bg-amber-100 px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone rounded-3xl"
+			class=" flex flex-col justify-center items-center gap-6 mx-4 px-8 py-8 prose-custom prose-xl lg:prose-2xl prose-stone border-[4px] border-stone-700 rounded-3xl"
 		>
 		<!-- <span>prev {JSON.stringify(page.url.prev)} {typeof page.url.prev}</span> -->
-		<div class="flex justify-end w-full">
+		<!-- <div class="flex justify-end w-full"> -->
 			<span>
 				Page {page.currentPage} of {page.lastPage}
 			</span>
-		</div>
+			<!-- </div> -->
+			<div class="w-full h-0 border-t border-t-stone-400"></div>
+			<a  href='/'>Beginning</a>
+			<div class="w-4/12 h-0 border-t border-t-stone-400"></div>
 		{page.url.prev !== undefined && <a href={page.currentPage === 2 ? '/' : page.url.prev}>Newer</a>}
 		{page.url.next !== undefined && <a href={page.url.next}>Older</a>}
-		<div class="w-full h-0 border-t border-t-stone-400"></div>
-		<a  href='/'>Beginning</a>
+		<div class="w-4/12 h-0 border-t border-t-stone-400"></div>
 		<a href={`/${page.lastPage}`}>End</a>
 		</nav>
 
@@ -74,10 +76,10 @@ const { page } = Astro.props
 			<address class="flex flex-col-reverse items-end">
 				<span class="text-stone-300">Created by Tom Szwaja</span>
 				<a
-					href="https://twitter.com/TomSzwa"
+					href="https://uiuxdev.social/web/@toms"
 					class="text-light"
 				>
-					Tweet with me
+					Toot with me
 				</a>
 			</address>
 		</footer>
