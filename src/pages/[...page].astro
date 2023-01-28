@@ -13,6 +13,8 @@ export async function getStaticPaths({ paginate }) {
 	return paginate(sortedPosts, { pageSize: 7 })
 }
 const { page } = Astro.props
+const prevUrl = page.currentPage === 2 ? '/' : page.url.prev
+const nextUrl = page.url.next
 ---
 
 <!DOCTYPE html>
@@ -28,54 +30,60 @@ const { page } = Astro.props
 	>
 		<main class="mt-16 px-4 prose-custom prose-xl lg:prose-2xl prose-stone">
 			<a href="/" class="no-underline">
-				<h1 class="font-chonk font-black text-outline mb-2  border-b border-b-stone-600 ">
+				<h1
+					class="font-chonk font-black text-outline mb-2  border-b border-b-stone-600 "
+				>
 					toms's blobs
 				</h1>
 			</a>
-			{page.data.map(({ frontmatter: {title, imgAlt, date, hasImg}, file, Content }) => (
-				<BlogPost
-					{title}
-					file={file}
-					{imgAlt}
-					{date}
-					{hasImg}
-				>
-					<Content />
-				</BlogPost>
-			))}
+			{page.data.map(
+				({
+					frontmatter: { title, imgAlt, date, hasImg },
+					file,
+					Content
+				}) => (
+					<BlogPost
+						title={title}
+						file={file}
+						imgAlt={imgAlt}
+						date={date}
+						hasImg={hasImg}
+					>
+						<Content />
+					</BlogPost>
+				)
+			)}
 		</main>
 
 		<nav
 			class=" flex flex-col justify-center items-center gap-6 mx-4 px-8 py-8 prose-custom prose-xl lg:prose-2xl prose-stone border-[4px] border-stone-700 rounded-3xl"
 		>
-		<!-- <span>prev {JSON.stringify(page.url.prev)} {typeof page.url.prev}</span> -->
-		<!-- <div class="flex justify-end w-full"> -->
+			<!-- <span>prev {JSON.stringify(page.url.prev)} {typeof page.url.prev}</span> -->
+			<!-- <div class="flex justify-end w-full"> -->
 			<span>
 				Page {page.currentPage} of {page.lastPage}
 			</span>
 			<!-- </div> -->
 			<div class="w-full h-0 border-t border-t-stone-400"></div>
-			<a  href='/'>Beginning</a>
+			<a href="/">Beginning</a>
 			<div class="w-4/12 h-0 border-t border-t-stone-400"></div>
-		{page.url.prev !== undefined && <a href={page.currentPage === 2 ? '/' : page.url.prev}>Newer</a>}
-		{page.url.next !== undefined && <a href={page.url.next}>Older</a>}
-		<div class="w-4/12 h-0 border-t border-t-stone-400"></div>
-		<a href={`/${page.lastPage}`}>End</a>
+			{prevUrl && <a href={prevUrl}>Newer</a>}
+			{nextUrl && <a href={nextUrl}>Older</a>}
+			<div class="w-4/12 h-0 border-t border-t-stone-400"></div>
+			<a href={`/${page.lastPage}`}>End</a>
 		</nav>
 
 		<footer
 			class="w-full flex flex-col gap-8 bg-dark px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
 		>
-			<a
-				href="https://www.100daysofx.com/"
-				class=" text-light"
-			>
+			<a href="https://www.100daysofx.com/" class=" text-light">
 				Learn about the #100DaysOfX thing
 			</a>
 			<div class="h-0 border border-b-light"></div>
 			<address class="flex flex-col-reverse items-end">
 				<span class="text-stone-300">Created by Tom Szwaja</span>
-				<a				rel="me"
+				<a
+					rel="me"
 					href="https://uiuxdev.social/@toms"
 					class="text-light"
 				>
