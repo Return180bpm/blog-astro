@@ -10,14 +10,12 @@ module.exports = {
 			current: 'currentColor',
 			amber: colors.amber,
 			stone: colors.stone,
-			dod: {
-				week1: {
-					burgundy: '#443038',
-					babypowder: '#FDFFFA',
-					red: '#FD7D94',
-					canary: '#FFFA98'
-				}
-			}
+			dark: 'hsl(var(--dark) / <alpha-value>)',
+			light: 'hsl(var(--light) / <alpha-value>)',
+			babypowder: '#FDFFFA',
+			red: '#FD7D94',
+			canary: '#FFFA98'
+
 		},
 		// extend: {
 		// 	typography: (theme) => ({
@@ -46,7 +44,8 @@ module.exports = {
 		// 	})
 		// },
 		fontFamily: {
-			sans: ['Padauk', 'sans-serif'],
+			sans: ['Arial', 'sans-serif'],
+			chonk: ['"Arial Black"', 'sans-serif'],
 			serif: ['Merriweather', 'serif']
 		}
 	},
