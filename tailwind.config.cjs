@@ -2,9 +2,35 @@
 
 const colors = require('tailwindcss/colors')
 
+const round = (num) =>
+	num
+		.toFixed(7)
+		.replace(/(\.[0-9]+?)0+$/, '$1')
+		.replace(/\.0$/, '')
+const rem = (px) => `${round(px / 16)}rem`
+const em = (px, base) => `${round(px / base)}em`
+
+const myCustomProseStyles = {
+	css: {
+		color: '#333',
+		hr: {
+			marginTop: rem(16)
+		}
+	}
+}
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		extend: {
+			typography: {
+				DEFAULT: myCustomProseStyles,
+				xl: myCustomProseStyles,
+				'2xl': myCustomProseStyles,
+				'3xl': myCustomProseStyles,
+				'4xl': myCustomProseStyles,
+				'5xl': myCustomProseStyles
+			}
+		},
 		colors: {
 			dark: 'hsl(var(--dark) / <alpha-value>)',
 			light: 'hsl(var(--light) / <alpha-value>)',
