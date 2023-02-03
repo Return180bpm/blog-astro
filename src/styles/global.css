@@ -8,6 +8,10 @@
 		-1px 1px 0 hsl(var(--dark)), 1px 1px 0 hsl(var(--dark));
 }
 
+.header-cell {
+	background-color: hsl(15, 44%, 80%);
+}
+
 @layer base {
 	:root {
 		--dark: 152 100% 3%;

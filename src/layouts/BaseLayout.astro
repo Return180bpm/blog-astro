@@ -8,29 +8,49 @@ import '../styles/global.css'
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta
+			name="viewport"
+			content="width=device-width"
+		/>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/favicon.ico"
+		/>
 		<title>{title}</title>
 	</head>
 	<body
 		class="a grid place-content-center gap-12 font-sans text-stone-600 bg-light"
 	>
 		<header
-			class="mt-16 px-4 prose-custom prose-xl lg:prose-2xl prose-stone"
+			id="header-grid"
+			class={`grid grid-cols-4 grid-rows-6 h-screen prose-custom prose-xl lg:prose-2xl prose-stone`}
 		>
-			<a href="/" class="no-underline">
-				<h1
-					class="font-chonk font-black text-outline mb-2  border-b border-b-stone-600 "
+			{[...Array(6*4)].map(() => (
+				<div class="header-cell" />
+			))}
+			<div
+				class={`col-start-2 col-span-2 row-start-2 row-span-4 grid place-content-center`}
+			>
+				<a
+					href="/"
+					class="w-min no-underline"
 				>
-					{title}
-				</h1>
-			</a>
+					<h1 class="inline font-chonk font-black text-outline">
+						{title}
+					</h1>
+				</a>
+			</div>
 		</header>
+
 		<slot />
 		<footer
 			class="w-full flex flex-col gap-8 bg-dark px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
 		>
-			<a href="https://www.100daysofx.com/" class=" text-light">
+			<a
+				href="https://www.100daysofx.com/"
+				class=" text-light"
+			>
 				Learn about the #100DaysOfX thing
 			</a>
 			<div class="h-0 border border-b-light"></div>
