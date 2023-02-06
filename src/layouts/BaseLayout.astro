@@ -2,21 +2,24 @@
 const title = "tom's blobs"
 
 import '../styles/global.css'
+
+function getRandomFromArray(list) {
+	return list[Math.floor(Math.random() * list.length)]
+}
+
+function getRandomInt(min, max) {
+	min = Math.ceil(min)
+	max = Math.floor(max)
+	return Math.floor(Math.random() * (max - min) + min) // The maximum is exclusive and the minimum is inclusive
+}
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width"
-		/>
-		<link
-			rel="icon"
-			type="image/x-icon"
-			href="/favicon.ico"
-		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>{title}</title>
 	</head>
 	<body
@@ -24,18 +27,31 @@ import '../styles/global.css'
 	>
 		<header
 			id="header-grid"
-			class={`grid grid-cols-4 grid-rows-6 h-screen prose-custom prose-xl lg:prose-2xl prose-stone`}
+			class={`grid grid-cols-4 grid-rows-5 h-screen prose-custom prose-xl lg:prose-2xl prose-stone`}
 		>
-			{[...Array(6*4)].map(() => (
-				<div class="header-cell" />
-			))}
+			{[...Array(5 * 4 - 3 * 2)].map((el, ind) => {
+				const blobPaths = []
+				for (const path in import.meta.glob(
+					'../../public/blobs/*.svg'
+				)) {
+					blobPaths.push(path)
+				}
+
+				return (
+					<div class="header-cell grid place-content-center">
+						<object
+							class="header-blob relative"
+							id={`header-blob-${ind}`}
+							type="image/svg+xml"
+							data={`${getRandomFromArray(blobPaths)}`}
+						/>
+					</div>
+				)
+			})}
 			<div
-				class={`col-start-2 col-span-2 row-start-2 row-span-4 grid place-content-center`}
+				class={`col-start-2 col-span-2 row-start-2 row-span-3 grid place-content-center`}
 			>
-				<a
-					href="/"
-					class="w-min no-underline"
-				>
+				<a href="/" class="w-min no-underline">
 					<h1 class="inline font-chonk font-black text-outline">
 						{title}
 					</h1>
@@ -47,10 +63,7 @@ import '../styles/global.css'
 		<footer
 			class="w-full flex flex-col gap-8 bg-dark px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
 		>
-			<a
-				href="https://www.100daysofx.com/"
-				class=" text-light"
-			>
+			<a href="https://www.100daysofx.com/" class=" text-light">
 				Learn about the #100DaysOfX thing
 			</a>
 			<div class="h-0 border border-b-light"></div>
@@ -65,5 +78,13 @@ import '../styles/global.css'
 				</a>
 			</address>
 		</footer>
+		<script>
+			const blobs = document.querySelectorAll('.header-blob')
+			blobs.forEach((blob) => {
+				blob.addEventListener('click', () => {
+					blob.classList.toggle('blob-animation')
+				})
+			})
+		</script>
 	</body>
 </html>

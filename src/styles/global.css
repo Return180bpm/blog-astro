@@ -8,8 +8,28 @@
 		-1px 1px 0 hsl(var(--dark)), 1px 1px 0 hsl(var(--dark));
 }
 
-.header-cell {
-	background-color: hsl(15, 44%, 80%);
+.header-cell object {
+	transition: all 1s ease-out;
+}
+.header-cell object:hover {
+	animation: 4s linear 0s infinite alternate blobbificate;
+	transition: all 3s ease-in;
+}
+
+@keyframes blobbificate {
+	from {
+		/* pushes the sun down past the viewport */
+		transform: rotate(0deg);
+	}
+	to {
+		/* returns the sun to its default position */
+		transform: rotate(360deg);
+	}
+}
+
+.blob-animation {
+	z-index: 99;
+	animation: 5s ease-in 0s infinite alternate blobbificate;
 }
 
 @layer base {
