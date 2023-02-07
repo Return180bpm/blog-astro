@@ -78,9 +78,10 @@ function getRandomInt(min, max) {
 				</a>
 			</address>
 		</footer>
-	</body>
 		<script>
-			const blobs: HTMLElement[] = Array.from(document.querySelectorAll('.header-blob'))
+			const blobs: HTMLElement[] = Array.from(
+				document.querySelectorAll('.header-blob')
+			)
 			// blobs.forEach((blob) => {
 			// 	blob.addEventListener('click', () => {
 			// 		blob.classList.toggle('blob-animation')
@@ -90,14 +91,18 @@ function getRandomInt(min, max) {
 			// BEB
 
 			function rotate(angle) {
-				if(angle >=360) {angle = 0;}
-				angle+=1;
+				if (angle >= 360) {
+					angle = 0
+				}
+				angle += 1
 			}
 
 			function animate(element, blobState: BlobState) {
 				element.style.transform = `rotate(${blobState.rotationAngle}deg)`
-				if(blobState.rotationAngle >=360) {blobState.rotationAngle = 0;}
-				blobState.rotationAngle+=2;
+				if (blobState.rotationAngle >= 360) {
+					blobState.rotationAngle = 0
+				}
+				blobState.rotationAngle += 2
 				// console.log(`inside animate --- rotationAngle: ${blobState.rotationAngle}`)
 			}
 
@@ -107,42 +112,41 @@ function getRandomInt(min, max) {
 			}
 			const blobStates: BlobState[] = []
 
-		blobs.forEach((blob, index ) => {
-			blobStates[index] = {
-				isHovering: false,
-				rotationAngle: 0
-			};
+			blobs.forEach((blob, index) => {
+				blobStates[index] = {
+					isHovering: false,
+					rotationAngle: 0
+				}
 
-			blob.addEventListener('mouseenter', () => {
-				// console.log('mouseenter');
-				blobStates[index].isHovering = true;
-				setInterval(()=>{
-					if (!blobStates[index].isHovering) return
-				animate(blob, blobStates[index])
-			}, 40);
-			blob.addEventListener('mouseleave', () => {
-				// console.log('mouseleave');
-				blobStates[index].isHovering = false;
+				blob.addEventListener('mouseenter', () => {
+					// console.log('mouseenter');
+					blobStates[index].isHovering = true
+					setInterval(() => {
+						if (!blobStates[index].isHovering) return
+						animate(blob, blobStates[index])
+					}, 40)
+					blob.addEventListener('mouseleave', () => {
+						// console.log('mouseleave');
+						blobStates[index].isHovering = false
+					})
+				})
 			})
-			})
-			})
 
-	// el.onMouseEnter(()=>{
-	// 	el.style.transform = `rotate(${rotationAngle})`
+			// el.onMouseEnter(()=>{
+			// 	el.style.transform = `rotate(${rotationAngle})`
 
+			// 	increaseAngle();
+			// })
 
-	// 	increaseAngle();
-	// })
+			//Tomas
 
-	//Tomas
+			// Blob.onMouseOut(()=>{
+			// 	const rotation = Blob.getStyle(rotation)
 
-	// Blob.onMouseOut(()=>{
-	// 	const rotation = Blob.getStyle(rotation)
+			// 	Blob.setStyle(rotation)
+			// })
 
-	// 	Blob.setStyle(rotation)
-	// })
-
-	//eventlistener(when rotation reach 360deg, set rotation to 0)
-
+			//eventlistener(when rotation reach 360deg, set rotation to 0)
 		</script>
+	</body>
 </html>
