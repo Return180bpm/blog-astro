@@ -9,16 +9,19 @@
 }
 
 .header-cell object {
-	transition: all 1s ease-out;
 }
-.header-cell object:hover {
+.anim {
+	transition: all 1s ease-out;
 	animation: 4s linear 0s infinite alternate blobbificate;
+}
+.xxxheader-cell object:hover {
+	transform: rotate(360deg);
 	transition: all 3s ease-in;
 }
 
 @keyframes blobbificate {
 	from {
-		/* pushes the sun down past the viewport */
+		/* what is the starting value? */
 		transform: rotate(0deg);
 	}
 	to {
