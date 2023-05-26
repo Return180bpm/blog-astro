@@ -15,7 +15,9 @@ const nextUrl = page.url.next
 ---
 
 <BaseLayout>
-	<main class="px-4 prose-custom prose-xl lg:prose-2xl prose-stone">
+	<main
+		class="max-w-min px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
+	>
 		{page.data.map(
 			({
 				frontmatter: { title, imgAlt, date, hasImg },
