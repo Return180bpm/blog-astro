@@ -9,21 +9,17 @@
 		"preview": "astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/tailwind": "^0.2.5",
-		"@tailwindcss/typography": "^0.5.9",
-		"@typescript-eslint/eslint-plugin": "^5.49.0",
-		"@typescript-eslint/parser": "^5.49.0",
-		"astro": "^1.9.2",
-		"eslint": "^8.32.0",
+		"@typescript-eslint/eslint-plugin": "^5.59.7",
+		"@typescript-eslint/parser": "^5.59.7",
+		"astro": "^2.5.5",
+		"eslint": "^8.41.0",
 		"eslint-plugin-astro": "^0.16.0",
 		"eslint-plugin-jsx-a11y": "^6.7.1",
-		"prettier": "^2.8.3",
+		"prettier": "^2.8.8",
 		"prettier-plugin-astro": "^0.2.0",
-		"tailwindcss": "^3.2.4",
-		"typescript": "^4.9.4"
+		"typescript": "^4.9.5"
 	},
 	"peerDependencies": {
-		"tailwindcss": ">=3.0.0 || insiders",
 		"typescript": ">=2.8.0"
 	}
 }
