@@ -15,34 +15,14 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props
 const prevUrl = page.currentPage === 2 ? '/' : page.url.prev
 const nextUrl = page.url.next
-
-// page.data.map((post) => {
-// 	console.log(post)
-// })
 ---
 
 <BaseLayout>
 	<main
 		class="max-w-min px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
 	>
-		{page.data.map((entry: { slug, data } ) => {
-			const { Content, headings } = await entry.render();
-
-			// console.log(post)
-			return (
-				<p>{post.data.title}</p>
-				// 	<BlogPost
-				// 		title={title}
-				// 		file={file}
-				// 		imgAlt={imgAlt}
-				// 		date={date}
-				// 		hasImg={hasImg}
-				// 		url={url}
-				// 	>
-				// 		<Content />
-				// 	</BlogPost>
-				// )
-			)
+		{page.data.map((entry) => {
+			return <BlogPost entry={entry} />
 		})}
 	</main>
 
