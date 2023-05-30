@@ -3,40 +3,47 @@ import BlogPost from '@/components/BlogPost.astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import { Frontmatter } from '@/types'
 import { sortByDate } from '@/utils'
+import { getCollection } from 'astro:content'
 
 export async function getStaticPaths({ paginate }) {
-	const unsortedPosts = await Astro.glob<Frontmatter>('./posts/100dod/*.md')
-	const sortedPosts = sortByDate(unsortedPosts)
-	return paginate(sortedPosts, { pageSize: 7 })
+	const unsortedPosts = await getCollection('posts', ({ data }) => {
+		return data.isDraft !== true
+	})
+	// const sortedPosts = sortByDate(unsortedPosts)
+	return paginate(unsortedPosts, { pageSize: 7 })
 }
 const { page } = Astro.props
 const prevUrl = page.currentPage === 2 ? '/' : page.url.prev
 const nextUrl = page.url.next
+
+// page.data.map((post) => {
+// 	console.log(post)
+// })
 ---
 
 <BaseLayout>
 	<main
 		class="max-w-min px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
 	>
-		{page.data.map(
-			({
-				frontmatter: { title, imgAlt, date, hasImg },
-				file,
-				url,
-				Content
-			}) => (
-				<BlogPost
-					title={title}
-					file={file}
-					imgAlt={imgAlt}
-					date={date}
-					hasImg={hasImg}
-					url={url}
-				>
-					<Content />
-				</BlogPost>
+		{page.data.map((entry: { slug, data } ) => {
+			const { Content, headings } = await entry.render();
+
+			// console.log(post)
+			return (
+				<p>{post.data.title}</p>
+				// 	<BlogPost
+				// 		title={title}
+				// 		file={file}
+				// 		imgAlt={imgAlt}
+				// 		date={date}
+				// 		hasImg={hasImg}
+				// 		url={url}
+				// 	>
+				// 		<Content />
+				// 	</BlogPost>
+				// )
 			)
-		)}
+		})}
 	</main>
 
 	<nav
