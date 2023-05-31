@@ -189,36 +189,71 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
-"35.md": {
-	id: "35.md";
-  slug: "me-vs-mood";
+"24.md": {
+	id: "24.md";
+  slug: "reset";
   body: string;
   collection: "posts";
-  data: InferEntrySchema<"posts">
+  data: any
 } & { render(): Render[".md"] };
-"36.md": {
-	id: "36.md";
-  slug: "36";
+"25.md": {
+	id: "25.md";
+  slug: "25";
   body: string;
   collection: "posts";
-  data: InferEntrySchema<"posts">
+  data: any
 } & { render(): Render[".md"] };
-};
-"temp for posts": {
+"26-30.md": {
+	id: "26-30.md";
+  slug: "strategy-avoid";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"31.md": {
+	id: "31.md";
+  slug: "public-mastication";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"32.md": {
+	id: "32.md";
+  slug: "officially-scheduled";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
 "33.md": {
 	id: "33.md";
   slug: "33";
   body: string;
-  collection: "temp for posts";
+  collection: "posts";
   data: any
 } & { render(): Render[".md"] };
 "34.md": {
 	id: "34.md";
   slug: "hollowed-out";
   body: string;
-  collection: "temp for posts";
+  collection: "posts";
   data: any
 } & { render(): Render[".md"] };
+"35.md": {
+	id: "35.md";
+  slug: "me-vs-mood";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"36.md": {
+	id: "36.md";
+  slug: "hardening";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+};
+"temp for posts": {
 "Day 1.md": {
 	id: "Day 1.md";
   slug: "day-1";
@@ -317,44 +352,9 @@ declare module 'astro:content' {
   collection: "temp for posts";
   data: any
 } & { render(): Render[".md"] };
-"Day 24.md": {
-	id: "Day 24.md";
-  slug: "day-24";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 25.md": {
-	id: "Day 25.md";
-  slug: "day-25";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 26-30.md": {
-	id: "Day 26-30.md";
-  slug: "day-26-30";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
 "Day 3.md": {
 	id: "Day 3.md";
   slug: "day-3";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 31.md": {
-	id: "Day 31.md";
-  slug: "day-31";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 32.md": {
-	id: "Day 32.md";
-  slug: "day-32";
   body: string;
   collection: "temp for posts";
   data: any
@@ -411,5 +411,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = typeof import("../src/content/config");
+	type ContentConfig = never;
 }
