@@ -252,6 +252,62 @@ declare module 'astro:content' {
   collection: "posts";
   data: any
 } & { render(): Render[".md"] };
+"Day 12.md": {
+	id: "Day 12.md";
+  slug: "day-12";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 13.md": {
+	id: "Day 13.md";
+  slug: "day-13";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 15.md": {
+	id: "Day 15.md";
+  slug: "day-15";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 16.md": {
+	id: "Day 16.md";
+  slug: "day-16";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 17.md": {
+	id: "Day 17.md";
+  slug: "day-17";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 18.md": {
+	id: "Day 18.md";
+  slug: "day-18";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 19.md": {
+	id: "Day 19.md";
+  slug: "day-19";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 20.md": {
+	id: "Day 20.md";
+  slug: "day-20";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
 "Day 21.md": {
 	id: "Day 21.md";
   slug: "day-21";
@@ -289,65 +345,9 @@ declare module 'astro:content' {
   collection: "temp for posts";
   data: any
 } & { render(): Render[".md"] };
-"Day 12.md": {
-	id: "Day 12.md";
-  slug: "day-12";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 13.md": {
-	id: "Day 13.md";
-  slug: "day-13";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 15.md": {
-	id: "Day 15.md";
-  slug: "day-15";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 16.md": {
-	id: "Day 16.md";
-  slug: "day-16";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 17.md": {
-	id: "Day 17.md";
-  slug: "day-17";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 18.md": {
-	id: "Day 18.md";
-  slug: "day-18";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 19.md": {
-	id: "Day 19.md";
-  slug: "day-19";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
 "Day 2.md": {
 	id: "Day 2.md";
   slug: "day-2";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 20.md": {
-	id: "Day 20.md";
-  slug: "day-20";
   body: string;
   collection: "temp for posts";
   data: any

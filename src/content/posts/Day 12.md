@@ -1,7 +1,10 @@
 ---
 title: Words on a Page
-date: 12.8.2022
-imgAlt:
+image:
+    url: /daycards/day-12.svg
+    alt: START HERE
+tags: ['#100DaysOfDesign', resume]
+pubDate: 12.8.2022
 ---
 
 -   Posted some 'hey all, here's me, let's connect!'-messages to some local telegram groups

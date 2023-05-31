@@ -1,8 +1,11 @@
 ---
 title: The CV Shuffle
-date: 16.8.2022
-imgAlt: >
-    The text 'Day 16' in big bold letters in front of a rectangular blackish shape, whose angles and ornamental protrusions make me think of a chest, podium or altar. Running through the letters are vertical stripes in a pinkish red, violet purple and canary yellow. Below, in thin letters of a standard reading size, the text '100 Days of Design', as if part of the dark shape.
+image:
+    url: /daycards/day-16.svg
+    alt: >
+        The text 'Day 16' in big bold letters in front of a rectangular blackish shape, whose angles and ornamental protrusions make me think of a chest, podium or altar. Running through the letters are vertical stripes in a pinkish red, violet purple and canary yellow. Below, in thin letters of a standard reading size, the text '100 Days of Design', as if part of the dark shape.
+tags: ['#100DaysOfDesign', doubt, designing, work, resume]
+pubDate: 16.8.2022
 ---
 
 -   Read about type (as in typeface): learned about how to choose the right type for the occasion, the OpenFont standard, types of numerals, and some basic vocabulary like cap height and tracking

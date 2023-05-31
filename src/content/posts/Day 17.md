@@ -1,8 +1,11 @@
 ---
 title: No Love for Chores
-date: 17.8.2022
-imgAlt: >
-    The text 'Day 17' repeated 3 times top to bottom, taking up the whole width and height of the image: the top in purple, the middle red, the bottom yellow. Each time the text is written with differently shaped letters. They seem a little off: in fact they are not written in a font but have been molded 'by hand' from simple lines with vector manipulation. They may be described as looking primitive, rough, simplistic, misshapen, futuristic or melted. In between the 3 lines of text there are 2 thick black bars with the text '100 Days of Design' running through them, repeated several times.
+image:
+    url: /daycards/day-17.svg
+    alt: >
+        The text 'Day 17' repeated 3 times top to bottom, taking up the whole width and height of the image: the top in purple, the middle red, the bottom yellow. Each time the text is written with differently shaped letters. They seem a little off: in fact they are not written in a font but have been molded 'by hand' from simple lines with vector manipulation. They may be described as looking primitive, rough, simplistic, misshapen, futuristic or melted. In between the 3 lines of text there are 2 thick black bars with the text '100 Days of Design' running through them, repeated several times.
+tags: ['#100DaysOfDesign', tech, doubt]
+pubDate: 17.8.2022
 ---
 
 -   Researched a bunch of stuff around Material Design (implementation, use-cases, MD 2 vs 3)
