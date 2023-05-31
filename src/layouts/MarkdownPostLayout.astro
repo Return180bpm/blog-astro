@@ -1,18 +1,41 @@
 ---
+import { formatDateObjToCustom } from '@/utils'
 // 1. The frontmatter prop gives access to frontmatter and other data
 const { frontmatter } = Astro.props
 ---
 
-<html lang="en">
-	<head>
-		<!-- Add other Head elements here, like styles and meta tags. -->
-		<title>{frontmatter.title}</title>
-	</head>
-	<body>
-		<!-- Add other UI components here, like common headers and footers. -->
-		<h1>{frontmatter.title} by {frontmatter.author}</h1>
-		<!-- 2. Rendered HTML will be passed into the default slot. -->
-		<slot />
-		<p>Written on: {frontmatter.date}</p>
-	</body>
-</html>
+<!-- Add other UI components here, like common headers and footers. -->
+<h1>{frontmatter.title}</h1>
+<!-- 2. Rendered HTML will be passed into the default slot. -->
+<slot />
+<p>Written on {formatDateObjToCustom(frontmatter.pubDate)}</p>
+<div class="tags">
+	{frontmatter.tags.map((tag) => (
+		<p class="tag">
+			<a href={`/tags/${tag}`}>{tag}</a>
+		</p>
+	))}
+</div>
+
+<slot />
+
+<style>
+	a {
+		color: #00539f;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+
+	.tag {
+		margin: 0.25em;
+		border: dotted 1px #a1a1a1;
+		border-radius: 0.5em;
+		padding: 0.5em 1em;
+		font-size: 1.15em;
+		background-color: #f8fcfd;
+	}
+</style>
