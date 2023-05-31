@@ -252,6 +252,27 @@ declare module 'astro:content' {
   collection: "posts";
   data: any
 } & { render(): Render[".md"] };
+"Day 21.md": {
+	id: "Day 21.md";
+  slug: "day-21";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 22.md": {
+	id: "Day 22.md";
+  slug: "day-22";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"Day 23.md": {
+	id: "Day 23.md";
+  slug: "day-23";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
 };
 "temp for posts": {
 "Day 1.md": {
@@ -327,27 +348,6 @@ declare module 'astro:content' {
 "Day 20.md": {
 	id: "Day 20.md";
   slug: "day-20";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 21.md": {
-	id: "Day 21.md";
-  slug: "day-21";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 22.md": {
-	id: "Day 22.md";
-  slug: "day-22";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 23.md": {
-	id: "Day 23.md";
-  slug: "day-23";
   body: string;
   collection: "temp for posts";
   data: any

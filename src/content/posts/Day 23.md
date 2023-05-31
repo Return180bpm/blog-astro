@@ -1,8 +1,7 @@
 ---
-title:
-date: 5.9.2022
-imgAlt:
-hasImg: false
+title: Day 23
+pubDate: 5.9.2022
+tags: [100DaysOfDesign, tech]
 ---
 
 -   Researched _caching on the web_
