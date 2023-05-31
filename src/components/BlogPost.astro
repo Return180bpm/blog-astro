@@ -21,12 +21,11 @@ const { Content } = await post.render()
 	{image && <img src={image.url} alt={image.alt} />}
 	<Content />
 
-	<footer
-		class="mt-4 pt-2 flex justify-between italic text-stone-500 border-t border-t-stone-400"
-	>
-		<span> Written on {formatDateObjToCustom(pubDate)}</span>
-
-		<a href={`/posts/${post.slug}`}>View post on own page</a>
+	<footer class="mt-4 pt-2 italic text-stone-500 border-t border-t-stone-400">
+		<div class="flex justify-between">
+			<span> Written on {formatDateObjToCustom(pubDate)}</span>
+			<a href={`/posts/${post.slug}`}>View post on own page</a>
+		</div>
 		<div class="tags">
 			{tags.map((tag) => (
 				<p class="tag">
@@ -39,7 +38,7 @@ const { Content } = await post.render()
 
 <style>
 	a {
-		color: #00539f;
+		color: #b46392;
 	}
 
 	.tags {
@@ -49,11 +48,11 @@ const { Content } = await post.render()
 	}
 
 	.tag {
-		margin: 0.25em;
-		border: dotted 1px #a1a1a1;
+		margin: 0.25em 0.25em 0 0.25em;
 		border-radius: 0.5em;
 		padding: 0.5em 1em;
-		font-size: 1.15em;
-		background-color: #f8fcfd;
+		font-size: 1em;
+		color: ivory;
+		background-color: #fbc7e5;
 	}
 </style>
