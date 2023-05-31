@@ -6,7 +6,7 @@ import { convertGermanToISODate } from '../utils'
 const postsCollection = defineCollection({
     type: 'content',
     schema: z.object({
-        isDraft: z.boolean(),
+        isDraft: z.boolean().default(false),
         title: z.coerce.string(),
         image: z.object({
             url: z.string(),
