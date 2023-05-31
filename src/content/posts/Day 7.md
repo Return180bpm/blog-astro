@@ -1,5 +1,6 @@
 ---
 title: Before the Almost
+slug: before-the-almost
 image:
     url: /daycards/day-7.svg
     alt: >

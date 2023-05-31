@@ -1,5 +1,6 @@
 ---
 title: No Love for Chores
+slug: no-love-for-chores
 image:
     url: /daycards/day-17.svg
     alt: >

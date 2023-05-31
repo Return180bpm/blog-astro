@@ -1,5 +1,6 @@
 ---
 title: The Merry-Go-Round of Doubt
+slug: the-merry-go-round-of-doubt
 image:
     url: /daycards/day-11.svg
     alt: >

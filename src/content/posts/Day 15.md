@@ -1,5 +1,6 @@
 ---
 title: Running Behind In Small Steps
+slug: running-behind-in-small-steps
 image:
     url: /daycards/day-15.svg
     alt: >

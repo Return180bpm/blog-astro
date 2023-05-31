@@ -1,5 +1,6 @@
 ---
 title: Accruements
+slug: accruements
 pubDate: 26.8.2022
 image:
     url: /daycards/day-21.svg

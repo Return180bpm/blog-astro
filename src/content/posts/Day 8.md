@@ -1,5 +1,6 @@
 ---
 title: Fun Times with UX and Capitalism
+slug: fun-times-with-ux-and-capitalism
 image:
     url: /daycards/day-8.svg
     alt: >

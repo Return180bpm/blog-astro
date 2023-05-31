@@ -1,5 +1,6 @@
 ---
 title: The CV Shuffle
+slug: the-cv-shuffle
 image:
     url: /daycards/day-16.svg
     alt: >

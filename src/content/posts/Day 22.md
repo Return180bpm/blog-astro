@@ -1,5 +1,6 @@
 ---
 title: Meandering
+slug: meandering
 image:
     url: /daycards/day-22.svg
     alt: >

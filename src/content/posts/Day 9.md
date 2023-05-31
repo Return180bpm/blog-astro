@@ -1,5 +1,6 @@
 ---
 title: Honest CVs
+slug: honest-cvs
 image:
     url: /daycards/day-9.svg
     alt: >

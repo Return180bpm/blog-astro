@@ -1,5 +1,6 @@
 ---
 title: Design First, Think Later
+slug: design-first-think-later
 image:
     url: /daycards/day-13.svg
     alt: >

@@ -1,5 +1,6 @@
 ---
 title: Blur
+slug: blur
 image:
     url: /daycards/day-6.svg
     alt: >

@@ -1,5 +1,6 @@
 ---
 title: Tiny important steps
+slug: tiny-important-steps
 image:
     url: /daycards/day-4.svg
     alt: >

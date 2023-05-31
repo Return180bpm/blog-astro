@@ -1,5 +1,6 @@
 ---
 title: Long Day
+slug: long-day
 image:
     url: /daycards/day-5.svg
     alt: >
