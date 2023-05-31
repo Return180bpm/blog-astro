@@ -7,14 +7,14 @@ const postsCollection = defineCollection({
     type: 'content',
     schema: z.object({
         isDraft: z.boolean(),
-        title: z.string(),
+        title: z.coerce.string(),
         image: z.object({
             url: z.string(),
             alt: z.string()
         }).optional(),
         description: z.string().optional(),
         author: z.string().default('Tom'),
-        tags: z.array(z.string()),
+        tags: z.array(z.coerce.string()),
         footnote: z.string().optional(),
         pubDate: z.coerce.string().transform(convertGermanToISODate).pipe(z.date())
     })
