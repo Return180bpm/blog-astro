@@ -21,5 +21,8 @@
 	},
 	"peerDependencies": {
 		"typescript": ">=2.8.0"
+	},
+	"dependencies": {
+		"@astrojs/rss": "^2.4.3"
 	}
 }
