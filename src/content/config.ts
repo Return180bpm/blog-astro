@@ -7,7 +7,7 @@ const postsCollection = defineCollection({
     type: 'content',
     schema: z.object({
         isDraft: z.boolean().default(false),
-        title: z.string().trim().min(1).or(z.number()),
+        title: z.string().trim().min(1).or(z.number()).transform(val => String(val)),
         image: z.object({
             url: z.string(),
             alt: z.string()
