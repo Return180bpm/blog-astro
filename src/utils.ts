@@ -19,11 +19,6 @@ const formatOrdinal = (n) => {
 	const suffix = suffixes.get(rule)
 	return `${n}${suffix}`
 }
-// in: 'd.m.yyyy'
-const makeDateObj = (myDate: string): Date => {
-	const [day, month, year] = myDate.split('.')
-	return new Date(Number(year), Number(month) - 1, Number(day))
-}
 
 // in: 'dd.m.yyyy'
 // out: Saturday, August 6th 2022
@@ -49,6 +44,11 @@ export function sortPostsByDate(posts: CollectionEntry<"posts">[]) {
 }
 
 // ### UNUSED but might be useful ###
+// in: 'd.m.yyyy'
+// const makeDateObj = (myDate: string): Date => {
+// 	const [day, month, year] = myDate.split('.')
+// 	return new Date(Number(year), Number(month) - 1, Number(day))
+// }
 
 // Standard long form date
 // in: 'dd.mm.yyyy'

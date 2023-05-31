@@ -8,7 +8,6 @@ interface Props {
 const { post } = Astro.props
 const { title, description, image, pubDate } = post.data
 const { Content, headings } = await post.render()
-console.log(headings)
 ---
 
 <article class="mt-48 first-of-type:mt-8 flex flex-col gap-0">
