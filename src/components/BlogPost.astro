@@ -24,13 +24,36 @@ const { Content } = await post.render()
 	<footer
 		class="mt-4 pt-2 flex justify-between italic text-stone-500 border-t border-t-stone-400"
 	>
-		<div>
-			{tags.map((tag) => {
-				return <a href={`/tags/${tag}`}>{tag}</a>
-			})}
-		</div>
 		<span> Written on {formatDateObjToCustom(pubDate)}</span>
-		<!-- <span> Written on {pubDate}</span> -->
+
 		<a href={`/posts/${post.slug}`}>View post on own page</a>
+		<div class="tags">
+			{tags.map((tag) => (
+				<p class="tag">
+					<a href={`/tags/${tag}`}>{tag}</a>
+				</p>
+			))}
+		</div>
 	</footer>
 </article>
+
+<style>
+	a {
+		color: #00539f;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+
+	.tag {
+		margin: 0.25em;
+		border: dotted 1px #a1a1a1;
+		border-radius: 0.5em;
+		padding: 0.5em 1em;
+		font-size: 1.15em;
+		background-color: #f8fcfd;
+	}
+</style>
