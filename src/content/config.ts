@@ -7,8 +7,7 @@ const postsCollection = defineCollection({
     type: 'content',
     schema: z.object({
         isDraft: z.boolean().default(false),
-        title: z.coerce.string().trim().min(1).refine((value) => value !== "null", 'title shouldnt be empty')
-        ,
+        title: z.string().trim().min(1).or(z.number()),
         image: z.object({
             url: z.string(),
             alt: z.string()
