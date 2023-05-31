@@ -17,6 +17,13 @@
 
 // My custom date
 
+// in: 'dd.mm.yyyy'
+export const convertGermanToISODate = (germanDate: string): Date => {
+	const [day, month, year] = germanDate.split('.')
+
+	return new Date(`${year}-${month}-${day}`)
+}
+
 const pr = new Intl.PluralRules('en-US', { type: 'ordinal' })
 const suffixes = new Map([
 	['one', 'st'],
@@ -36,7 +43,7 @@ const makeDateObj = (myDate: string): Date => {
 }
 // in: 'dd.m.yyyy'
 // out: Saturday, August 6th 2022
-export const formatDateToCustom = (dateFromMarkdown: string): string => {
+export const formatDateStringToCustom = (dateFromMarkdown: string): string => {
 	const [day, month, year] = dateFromMarkdown.split('.')
 	const dateObj = new Date(Number(year), Number(month) - 1, Number(day))
 	const monthName = new Intl.DateTimeFormat('en-US', {
@@ -47,6 +54,19 @@ export const formatDateToCustom = (dateFromMarkdown: string): string => {
 	}).format(dateObj)
 
 	return `${weekday}, ${monthName} ${formatOrdinal(day)} ${year}`
+}
+
+// in: 'dd.m.yyyy'
+// out: Saturday, August 6th 2022
+export const formatDateObjToCustom = (dateFromZod: Date): string => {
+	const monthName = new Intl.DateTimeFormat('en-US', {
+		month: 'long'
+	}).format(dateFromZod)
+	const weekday = new Intl.DateTimeFormat('en-US', {
+		weekday: 'long'
+	}).format(dateFromZod)
+
+	return `${weekday}, ${monthName} ${formatOrdinal(dateFromZod.getDate())} ${dateFromZod.getFullYear()}`
 }
 
 // other

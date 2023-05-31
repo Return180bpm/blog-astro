@@ -1,12 +1,12 @@
 ---
-import { formatDateToCustom } from '@/utils'
+import { formatDateObjToCustom } from '@/utils'
 import type { CollectionEntry } from 'astro:content'
 interface Props {
 	post: CollectionEntry<'posts'>
 }
 
 const { post } = Astro.props
-const { title, description, image } = post.data
+const { title, description, image, pubDate } = post.data
 const { Content, headings } = await post.render()
 console.log(headings)
 ---
@@ -25,7 +25,8 @@ console.log(headings)
 	<footer
 		class="mt-4 pt-2 flex justify-between italic text-stone-500 border-t border-t-stone-400"
 	>
-		<!-- <span> Written on {formatDateToCustom(date)}</span> -->
+		<span> Written on {formatDateObjToCustom(pubDate)}</span>
+		<!-- <span> Written on {pubDate}</span> -->
 		<a href={`/posts/${post.slug}`}>View post on own page</a>
 	</footer>
 </article>

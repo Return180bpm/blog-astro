@@ -1,5 +1,7 @@
 // Import utilities from `astro:content`
 import { z, defineCollection } from "astro:content";
+import { convertGermanToISODate } from '../utils'
+
 // Define a `type` and `schema` for each collection
 const postsCollection = defineCollection({
     type: 'content',
@@ -14,7 +16,7 @@ const postsCollection = defineCollection({
         author: z.string().default('Tom'),
         tags: z.array(z.string()),
         footnote: z.string().optional(),
-        pubDate: z.date()
+        pubDate: z.coerce.string().transform(convertGermanToISODate).pipe(z.date())
     })
 });
 // Export a single `collections` object to register your collection(s)
