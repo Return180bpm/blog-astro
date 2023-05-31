@@ -2,26 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-outline {
+	color: hsl(var(--light));
+	text-shadow: -1px -1px 0 hsl(var(--dark)), 1px -1px 0 hsl(var(--dark)),
+		-1px 1px 0 hsl(var(--dark)), 1px 1px 0 hsl(var(--dark));
+}
+
+.header-cell object {
+}
+.anim {
+	transition: all 1s ease-out;
+	animation: 4s linear 0s infinite alternate blobbificate;
+}
+.xxxheader-cell object:hover {
+	transform: rotate(360deg);
+	transition: all 3s ease-in;
+}
+
+@keyframes blobbificate {
+	from {
+		/* what is the starting value? */
+		transform: rotate(0deg);
+	}
+	to {
+		/* returns the sun to its default position */
+		transform: rotate(360deg);
+	}
+}
+
+.blob-animation {
+	z-index: 99;
+	animation: 5s ease-in 0s infinite alternate blobbificate;
+}
+
 @layer base {
-	@font-face {
-		font-family: 'Padauk';
-		src: url('/fonts/Padauk-Regular.ttf') format('ttf');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
+	:root {
+		--dark: 152 100% 3%;
+		--light: 180 16% 98%;
 	}
-	@font-face {
-		font-family: 'Padauk';
-		src: url('/fonts/Padauk-Bold.ttf') format('ttf');
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
-	}
+
 	img + ul {
 		@apply px-4 py-4 border border-stone-400 rounded-2xl;
 	}
 
 	.prose-custom {
-		@apply prose prose-headings:text-dod-week1-burgundy prose-strong:text-dod-week1-burgundy prose-em:text-stone-600 prose-p:text-stone-600 prose-a:text-dod-week1-burgundy prose-a:decoration-dod-week1-red prose-a:decoration-4 hover:prose-a:text-dod-week1-red prose-li:marker:text-stone-400;
+		@apply prose prose-headings:text-dark prose-strong:text-dark prose-em:text-stone-600 prose-p:text-stone-600 prose-a:text-dark prose-a:decoration-red prose-a:decoration-4 hover:prose-a:text-red prose-li:marker:text-stone-400;
 	}
 }

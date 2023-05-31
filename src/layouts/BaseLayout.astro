@@ -1,0 +1,151 @@
+---
+const title = "tom's blobs"
+
+import '../styles/global.css'
+
+function getRandomFromArray(list) {
+	return list[Math.floor(Math.random() * list.length)]
+}
+
+function getRandomInt(min, max) {
+	min = Math.ceil(min)
+	max = Math.floor(max)
+	return Math.floor(Math.random() * (max - min) + min) // The maximum is exclusive and the minimum is inclusive
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<title>{title}</title>
+	</head>
+	<body
+		class="grid place-content-center gap-12 font-sans text-stone-600 bg-light overflow-x-auto"
+	>
+		<!-- <header
+			id="header-grid"
+			class={`grid grid-cols-4 grid-rows-5 h-screen prose-custom prose-xl lg:prose-2xl prose-stone`}
+		>
+			{[...Array(5 * 4 - 3 * 2)].map((el, ind) => {
+				const blobPaths = []
+				for (const path in import.meta.glob(
+					'../../public/blobs/*.svg'
+				)) {
+					blobPaths.push(path)
+				}
+
+				return (
+					<div class="header-cell grid place-content-center">
+						<object
+							class="header-blob relative"
+							id={`header-blob-${ind}`}
+							type="image/svg+xml"
+							data={`${getRandomFromArray(blobPaths)}`}
+						/>
+					</div>
+				)
+			})}
+			<div
+				class={`col-start-2 col-span-2 row-start-2 row-span-3 grid place-content-center`}
+			>
+				<a href="/" class="w-min no-underline">
+					<h1 class="inline font-chonk font-black text-outline">
+						{title}
+					</h1>
+				</a>
+			</div>
+		</header> -->
+
+		<slot />
+		<footer
+			class="w-full flex flex-col gap-8 bg-dark px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
+		>
+			<a href="https://www.100daysofx.com/" class=" text-light">
+				Learn about the #100DaysOfX thing
+			</a>
+			<div class="h-0 border border-b-light"></div>
+			<address class="flex flex-col-reverse items-end">
+				<a
+					rel="me"
+					href="https://uiuxdev.social/@toms"
+					class="text-light"
+				>
+					Toot with me
+				</a>
+			</address>
+		</footer>
+		<script>
+			const blobs: HTMLElement[] = Array.from(
+				document.querySelectorAll('.header-blob')
+			)
+			// blobs.forEach((blob) => {
+			// 	blob.addEventListener('click', () => {
+			// 		blob.classList.toggle('blob-animation')
+			// 	})
+			// })
+
+			// BEB
+
+			function rotate(angle) {
+				if (angle >= 360) {
+					angle = 0
+				}
+				angle += 1
+			}
+
+			function animate(element, blobState: BlobState) {
+				element.style.transform = `rotate(${blobState.rotationAngle}deg)`
+				if (blobState.rotationAngle >= 360) {
+					blobState.rotationAngle = 0
+				}
+				blobState.rotationAngle += 2
+				// console.log(`inside animate --- rotationAngle: ${blobState.rotationAngle}`)
+			}
+
+			interface BlobState {
+				isHovering: boolean
+				rotationAngle: number
+			}
+			const blobStates: BlobState[] = []
+
+			blobs.forEach((blob, index) => {
+				blobStates[index] = {
+					isHovering: false,
+					rotationAngle: 0
+				}
+
+				blob.addEventListener('mouseenter', () => {
+					// console.log('mouseenter');
+					blobStates[index].isHovering = true
+					setInterval(() => {
+						if (!blobStates[index].isHovering) return
+						animate(blob, blobStates[index])
+					}, 40)
+					blob.addEventListener('mouseleave', () => {
+						// console.log('mouseleave');
+						blobStates[index].isHovering = false
+					})
+				})
+			})
+
+			// el.onMouseEnter(()=>{
+			// 	el.style.transform = `rotate(${rotationAngle})`
+
+			// 	increaseAngle();
+			// })
+
+			//Tomas
+
+			// Blob.onMouseOut(()=>{
+			// 	const rotation = Blob.getStyle(rotation)
+
+			// 	Blob.setStyle(rotation)
+			// })
+
+			//eventlistener(when rotation reach 360deg, set rotation to 0)
+		</script>
+	</body>
+</html>

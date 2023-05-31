@@ -1,32 +1,36 @@
 ---
-import { formatDateToCustom } from '@/utils'
-export interface Props {
-	title: string
-	file: string
-	imgAlt: string
-	date: string
+import { formatDateObjToCustom } from '@/utils'
+import type { CollectionEntry } from 'astro:content'
+interface Props {
+	post: CollectionEntry<'posts'>
 }
 
-const { file, imgAlt, date } = Astro.props as Props
-const fileName = ((): string => {
-	const indexOfLastBackSlash = file.lastIndexOf('/')
-	const indexOfLastColon = file.lastIndexOf('.')
-	const fileName = file.slice(indexOfLastBackSlash + 1, indexOfLastColon)
-	return fileName
-})()
-const title = Astro.props.title || fileName
+const { post } = Astro.props
+const { title, description, image, tags, pubDate } = post.data
+const { Content } = await post.render()
 ---
 
-<article class="mt-64 first-of-type:mt-16 flex flex-col gap-0 px-4">
-	<h2 id={title}>
+<article class="mt-48 first-of-type:mt-8 flex flex-col gap-0">
+	<h2 id={title} class="text-6xl lg:text-8xl !mt-0">
 		<a href={`#${title}`}>{title}</a>
 	</h2>
-	{Astro.props.title ? (
-		<h3 class="text-xl text-stone-500">{fileName}</h3>
+	{description ? (
+		<h3 class="text-2xl text-stone-500">{description}</h3>
 	) : null}
-	<img src={`/daycards/${fileName}.png`} alt={imgAlt} />
-	<slot />
-	<footer class="mt-2 pt-2 italic text-stone-500 border-t border-t-stone-400">
-		<span> Written by Tom on {formatDateToCustom(date)}</span>
+
+	{image && <img src={image.url} alt={image.alt} />}
+	<Content />
+
+	<footer
+		class="mt-4 pt-2 flex justify-between italic text-stone-500 border-t border-t-stone-400"
+	>
+		<div>
+			{tags.map((tag) => {
+				return <a href={`/tags/${tag}`}>{tag}</a>
+			})}
+		</div>
+		<span> Written on {formatDateObjToCustom(pubDate)}</span>
+		<!-- <span> Written on {pubDate}</span> -->
+		<a href={`/posts/${post.slug}`}>View post on own page</a>
 	</footer>
 </article>

@@ -1,0 +1,24 @@
+---
+title: Reset
+date: 6.9.2022
+imgAlt:
+hasImg: false
+---
+
+-   Replaced all _PNG_-images on this blog with _SVGs_
+
+Ok, it's time. I've been meaning to re-evaluate this project for like 2 weeks.
+
+I feel isolated, overwhelmed and this results in a feeling of _treading water_. I've been here before.
+
+Sometimes I feel like I'm drowning in stuff, and maintaining this blog - writing the posts, creating the daycards - is like the cherry on top, [if the cherry on top was made of tungsten](https://www.youtube.com/watch?v=C7EocA1hsCU)
+
+I feel like I'm not really _doing much designing_. And what I see others doing and calling design interests me less and less - designing another UI for another app.
+
+I think all of these things had been brewing under the surface for a while now, but they really bubbled up last week, when I read a few big-picture articles about design, especially some of Mike Monteiro's. (Like [this one](https://medium.com/thinking-design/who-do-designers-really-work-for-43192dc09a27?source=list-eebfd33206ee--------0-------6599f19bd011---------------------) that reframes designing as a service for the people who are going to be using the product, instead of a service for a client.)
+
+All I can say at this point is _smth smth design ethics_. I feel my interest in creating nice looking UIs waning. Something older and deeper is on the rise... Could I bring my values into this and make it more than just a job?
+
+This is all very fresh and kind of confused. Abstract even. But things have been stirred up that can't be unstirred.
+
+And so I gotta ask myself: how much of what I've been doing during the first 24 days of this challenge do I want to call _designing_?

@@ -1,75 +1,42 @@
 ---
 import BlogPost from '@/components/BlogPost.astro'
-import { Frontmatter } from '@/types'
-import { sortByDate } from '@/utils'
-
-import '../styles/global.css'
-
-// const posts = await Astro.glob<Frontmatter>('./posts/100dod/*.md')
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { sortPostsByDate } from '@/utils'
+import { getCollection } from 'astro:content'
 
 export async function getStaticPaths({ paginate }) {
-	const unsortedPosts = await Astro.glob<Frontmatter>('./posts/100dod/*.md')
-	const sortedPosts = sortByDate(unsortedPosts)
-	return paginate(sortedPosts, { pageSize: 7 })
+	const unsortedPosts = await getCollection('posts', ({ data }) => {
+		return data.isDraft !== true
+	})
+	const postsByDate = sortPostsByDate(unsortedPosts)
+	return paginate(postsByDate, { pageSize: 7 })
 }
 const { page } = Astro.props
+const prevUrl = page.currentPage === 2 ? '/' : page.url.prev
+const nextUrl = page.url.next
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>tom's blobs</title>
-	</head>
-	<body
-		class="grid place-content-center gap-12 font-sans text-stone-600 bg-dod-week1-babypowder"
+<BaseLayout>
+	<main
+		class="max-w-min px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
 	>
-		<main class="mt-16 px-4 prose-custom prose-xl lg:prose-2xl prose-stone">
-			<h1 class="mb-2  border-b border-b-stone-600 ">
-				100 Days of Design
-			</h1>
-			<img src="/daycards/Day 18.svg" alt="test" class="w-full" />
-			<img src="/daycards/Day 18.png" alt="testhey" class="w-full" />
-			{page.data.map(({ frontmatter, file, Content }) => (
-				<BlogPost
-					title={frontmatter.title}
-					file={file}
-					imgAlt={frontmatter.imgAlt}
-					date={frontmatter.date}
-				>
-					<Content />
-				</BlogPost>
-			))}
-		</main>
+		{page.data.map((post) => {
+			return <BlogPost post={post} />
+		})}
+	</main>
 
-		<nav
-			class="w-full flex flex-col justify-center items-center gap-6 bg-amber-100 px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone rounded-3xl"
-		>
-			{page.url.prev ? <a href={page.url.prev}>Newer Posts</a> : null}
-			{page.url.next ? <a href={page.url.next}>Older Posts</a> : null}
-		</nav>
-
-		<footer
-			class="w-full flex flex-col gap-8 bg-dod-week1-burgundy px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
-		>
-			<a
-				href="https://www.100daysofx.com/"
-				class=" text-dod-week1-babypowder"
-			>
-				Learn about the official #100DaysOfX thing
-			</a>
-			<div class="h-0 border border-b-dod-week1-babypowder"></div>
-			<address class="flex flex-col-reverse items-end">
-				<span class="text-stone-300">Created by Tom Szwaja</span>
-				<a
-					href="https://twitter.com/TomSzwa"
-					class="text-dod-week1-babypowder"
-				>
-					Tweet with me
-				</a>
-			</address>
-		</footer>
-	</body>
-</html>
+	<nav
+		class=" flex flex-col justify-center items-center gap-6 mx-4 px-8 py-8 prose-custom prose-xl lg:prose-2xl prose-stone border-[4px] border-stone-700 rounded-3xl"
+	>
+		<span>
+			Page {page.currentPage} of {page.lastPage}
+		</span>
+		<div class="w-full h-0 border-t border-t-stone-400"></div>
+		<a href="/">Beginning</a>
+		<div class="w-4/12 h-0 border-t border-t-stone-400"></div>
+		{prevUrl && <a href={prevUrl}>Newer</a>}
+		{nextUrl && <a href={nextUrl}>Older</a>}
+		<div class="w-4/12 h-0 border-t border-t-stone-400"></div>
+		<a href={`/${page.lastPage}`}>End</a>
+	</nav>
+</BaseLayout>
