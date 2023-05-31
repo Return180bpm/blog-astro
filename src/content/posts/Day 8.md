@@ -1,7 +1,11 @@
 ---
 title: Fun Times with UX and Capitalism
-date: 8.8.2022
-imgAlt:
+image:
+    url: /daycards/day-8.svg
+    alt: >
+        Text: '100 Days of Design. Day 8'. Between both phrases interlocking rings in grey. Two of them blue to form the number 8.
+tags: ['#100DaysOfDesign', morose, doubt, ux, design, capitalism]
+pubDate: 8.8.2022
 ---
 
 -   [Read an article about designing websites for people with anxiety](https://www.tpgi.com/a-web-of-anxiety-accessibility-for-people-with-anxiety-and-panic-disorders-part-2/)

@@ -194,212 +194,210 @@ declare module 'astro:content' {
   slug: "reset";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "25.md": {
 	id: "25.md";
   slug: "25";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "26-30.md": {
 	id: "26-30.md";
   slug: "strategy-avoid";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "31.md": {
 	id: "31.md";
   slug: "public-mastication";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "32.md": {
 	id: "32.md";
   slug: "officially-scheduled";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "33.md": {
 	id: "33.md";
   slug: "33";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "34.md": {
 	id: "34.md";
   slug: "hollowed-out";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "35.md": {
 	id: "35.md";
   slug: "me-vs-mood";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "36.md": {
 	id: "36.md";
   slug: "hardening";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"Day 1.md": {
+	id: "Day 1.md";
+  slug: "day-1";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"Day 11.md": {
+	id: "Day 11.md";
+  slug: "day-11";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 12.md": {
 	id: "Day 12.md";
   slug: "day-12";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 13.md": {
 	id: "Day 13.md";
   slug: "day-13";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 15.md": {
 	id: "Day 15.md";
   slug: "day-15";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 16.md": {
 	id: "Day 16.md";
   slug: "day-16";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 17.md": {
 	id: "Day 17.md";
   slug: "day-17";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 18.md": {
 	id: "Day 18.md";
   slug: "day-18";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 19.md": {
 	id: "Day 19.md";
   slug: "day-19";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"Day 2.md": {
+	id: "Day 2.md";
+  slug: "day-2";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 20.md": {
 	id: "Day 20.md";
   slug: "day-20";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 21.md": {
 	id: "Day 21.md";
   slug: "day-21";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 22.md": {
 	id: "Day 22.md";
   slug: "day-22";
   body: string;
   collection: "posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 23.md": {
 	id: "Day 23.md";
   slug: "day-23";
   body: string;
   collection: "posts";
-  data: any
-} & { render(): Render[".md"] };
-};
-"temp for posts": {
-"Day 1.md": {
-	id: "Day 1.md";
-  slug: "day-1";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 11.md": {
-	id: "Day 11.md";
-  slug: "day-11";
-  body: string;
-  collection: "temp for posts";
-  data: any
-} & { render(): Render[".md"] };
-"Day 2.md": {
-	id: "Day 2.md";
-  slug: "day-2";
-  body: string;
-  collection: "temp for posts";
-  data: any
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 3.md": {
 	id: "Day 3.md";
   slug: "day-3";
   body: string;
-  collection: "temp for posts";
-  data: any
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 4.md": {
 	id: "Day 4.md";
   slug: "day-4";
   body: string;
-  collection: "temp for posts";
-  data: any
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 5.md": {
 	id: "Day 5.md";
   slug: "day-5";
   body: string;
-  collection: "temp for posts";
-  data: any
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 6.md": {
 	id: "Day 6.md";
   slug: "day-6";
   body: string;
-  collection: "temp for posts";
-  data: any
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 7.md": {
 	id: "Day 7.md";
   slug: "day-7";
   body: string;
-  collection: "temp for posts";
-  data: any
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 8.md": {
 	id: "Day 8.md";
   slug: "day-8";
   body: string;
-  collection: "temp for posts";
-  data: any
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 "Day 9.md": {
 	id: "Day 9.md";
   slug: "day-9";
   body: string;
-  collection: "temp for posts";
-  data: any
+  collection: "posts";
+  data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 };
 
@@ -411,5 +409,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }

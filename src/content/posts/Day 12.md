@@ -2,7 +2,10 @@
 title: Words on a Page
 image:
     url: /daycards/day-12.svg
-    alt: START HERE
+    alt: >
+        Rectangles within rectangles. An assymetrical composition using a palette of greys and a single marine blue.
+        Fields of color take on the meaning of borders thanks to the fields they contain.
+        Text in the blue field: '100 Days of Design'. Text within a stack of grey frames on top of the blue field: 'Day 12'
 tags: ['#100DaysOfDesign', resume]
 pubDate: 12.8.2022
 ---
