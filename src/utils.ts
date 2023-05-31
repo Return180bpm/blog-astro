@@ -40,15 +40,12 @@ export const formatDateObjToCustom = (dateFromZod: Date): string => {
 
 // ### Sorting ###
 
-import { MarkdownInstance } from 'astro'
-import { Frontmatter } from '@/types'
+import type { CollectionEntry } from "astro:content";
 
-export const sortByDate = (posts: MarkdownInstance<Frontmatter>[]) => {
+export function sortPostsByDate(posts: CollectionEntry<"posts">[]) {
 	return posts.sort(
-		(a, b) =>
-			makeDateObj(b.frontmatter.date).valueOf() -
-			makeDateObj(a.frontmatter.date).valueOf()
-	)
+		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	);
 }
 
 // ### UNUSED but might be useful ###

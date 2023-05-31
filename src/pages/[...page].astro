@@ -1,15 +1,15 @@
 ---
 import BlogPost from '@/components/BlogPost.astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { sortByDate } from '@/utils'
+import { sortPostsByDate } from '@/utils'
 import { getCollection } from 'astro:content'
 
 export async function getStaticPaths({ paginate }) {
 	const unsortedPosts = await getCollection('posts', ({ data }) => {
 		return data.isDraft !== true
 	})
-	// const sortedPosts = sortByDate(unsortedPosts)
-	return paginate(unsortedPosts, { pageSize: 7 })
+	const postsByDate = sortPostsByDate(unsortedPosts)
+	return paginate(postsByDate, { pageSize: 7 })
 }
 const { page } = Astro.props
 const prevUrl = page.currentPage === 2 ? '/' : page.url.prev
