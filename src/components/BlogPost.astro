@@ -6,8 +6,8 @@ interface Props {
 }
 
 const { post } = Astro.props
-const { title, description, image, pubDate } = post.data
-const { Content, headings } = await post.render()
+const { title, description, image, tags, pubDate } = post.data
+const { Content } = await post.render()
 ---
 
 <article class="mt-48 first-of-type:mt-8 flex flex-col gap-0">
@@ -24,6 +24,11 @@ const { Content, headings } = await post.render()
 	<footer
 		class="mt-4 pt-2 flex justify-between italic text-stone-500 border-t border-t-stone-400"
 	>
+		<div>
+			{tags.map((tag) => {
+				return <a href={`/tags/${tag}`}>{tag}</a>
+			})}
+		</div>
 		<span> Written on {formatDateObjToCustom(pubDate)}</span>
 		<!-- <span> Written on {pubDate}</span> -->
 		<a href={`/posts/${post.slug}`}>View post on own page</a>
