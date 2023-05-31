@@ -399,6 +399,20 @@ declare module 'astro:content' {
   collection: "posts";
   data: any
 } & { render(): Render[".md"] };
+"drafts/Day 20-copy - frontend frustration.md": {
+	id: "drafts/Day 20-copy - frontend frustration.md";
+  slug: "Frontend-frustration";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"drafts/Lost.md": {
+	id: "drafts/Lost.md";
+  slug: "lost";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
 };
 
 	};
