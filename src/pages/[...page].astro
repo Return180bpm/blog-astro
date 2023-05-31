@@ -1,7 +1,6 @@
 ---
 import BlogPost from '@/components/BlogPost.astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import { Frontmatter } from '@/types'
 import { sortByDate } from '@/utils'
 import { getCollection } from 'astro:content'
 
@@ -21,8 +20,8 @@ const nextUrl = page.url.next
 	<main
 		class="max-w-min px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
 	>
-		{page.data.map((entry) => {
-			return <BlogPost entry={entry} />
+		{page.data.map((post) => {
+			return <BlogPost post={post} />
 		})}
 	</main>
 

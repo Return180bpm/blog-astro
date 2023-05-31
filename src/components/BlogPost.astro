@@ -1,41 +1,31 @@
 ---
 import { formatDateToCustom } from '@/utils'
-export interface Props {
-	title: string
-	file: string
-	imgAlt: string
-	date: string
-	url: string
-	hasImg?: boolean | undefined
+import type { CollectionEntry } from 'astro:content'
+interface Props {
+	post: CollectionEntry<'posts'>
 }
 
-const { file, imgAlt, date, url } = Astro.props as Props
-const fileName = ((): string => {
-	const indexOfLastBackSlash = file.lastIndexOf('/')
-	const indexOfLastColon = file.lastIndexOf('.')
-	const fileName = file.slice(indexOfLastBackSlash + 1, indexOfLastColon)
-	return fileName
-})()
-const title = Astro.props.title || fileName
+const { post } = Astro.props
+const { title, description, image } = post.data
+const { Content, headings } = await post.render()
+console.log(headings)
 ---
 
 <article class="mt-48 first-of-type:mt-8 flex flex-col gap-0">
 	<h2 id={title} class="text-6xl lg:text-8xl !mt-0">
 		<a href={`#${title}`}>{title}</a>
 	</h2>
-	{Astro.props.title ? (
-		<h3 class="text-2xl text-stone-500">{fileName}</h3>
+	{description ? (
+		<h3 class="text-2xl text-stone-500">{description}</h3>
 	) : null}
 
-	{Astro.props.hasImg !== false && (
-		<img src={`/daycards/${fileName}.svg`} alt={imgAlt} />
-	)}
+	{image && <img src={image.url} alt={image.alt} />}
+	<Content />
 
-	<slot />
 	<footer
 		class="mt-4 pt-2 flex justify-between italic text-stone-500 border-t border-t-stone-400"
 	>
-		<span> Written on {formatDateToCustom(date)}</span>
-		<a href={url}>View post on own page</a>
+		<!-- <span> Written on {formatDateToCustom(date)}</span> -->
+		<a href={`/posts/${post.slug}`}>View post on own page</a>
 	</footer>
 </article>
