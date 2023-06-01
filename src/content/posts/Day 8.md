@@ -5,7 +5,7 @@ image:
     url: /daycards/day-8.svg
     alt: >
         Text: '100 Days of Design. Day 8'. Between both phrases interlocking rings in grey. Two of them blue to form the number 8.
-tags: ['#100DaysOfDesign', morose, doubt, ux, design, capitalism]
+tags: [100DaysOfDesign', morose, doubt, ux, design, capitalism]
 pubDate: 8.8.2022
 ---
 

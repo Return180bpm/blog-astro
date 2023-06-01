@@ -5,7 +5,7 @@ image:
     url: /daycards/day-11.svg
     alt: >
         Round shapes suspended in a crowd. Greys and a single marine blue. Text: '100 Days of Design. Day 11'
-tags: ['#100DaysOfDesign', doubt, unconscious]
+tags: [100DaysOfDesign', doubt, unconscious]
 pubDate: 11.8.2022
 ---
 

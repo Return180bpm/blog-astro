@@ -5,7 +5,7 @@ image:
     url: /daycards/day-6.svg
     alt: >
         A great big squiggle, coal on cream. One of its loops is filled with flesh red. Text: "Day 6. 100 Days of Design", stacked neatly in the bottom left corner. The belly of the 6 yellow as a canary.
-tags: ['#100DaysOfDesign', feeling, work, design]
+tags: [100DaysOfDesign', feeling, work, design]
 pubDate: 6.8.2022
 ---
 

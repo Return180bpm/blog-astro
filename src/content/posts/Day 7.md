@@ -5,7 +5,7 @@ image:
     url: /daycards/day-7.svg
     alt: >
         A squarish image, the creamy light background melting into the background of the page. A series of concentric blobs using this week's color palette - from outside in: canary yellow, fleshy red, a very dark brown they call old burgundy and in the middle the same creamy color as the background. Text - "Day 7" giant and stretched, hovering like a blimp at the top of the image, behind the blobs. Text - "100 Days of Design", the words neatly stacked in the bottom right corner.
-tags: ['#100DaysOfDesign', morose]
+tags: [100DaysOfDesign', morose]
 pubDate: 7.8.2022
 ---
 

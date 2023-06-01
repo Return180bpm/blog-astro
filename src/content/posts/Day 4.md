@@ -6,7 +6,7 @@ image:
     alt: >
         Frames within frames, each one misaligned yet all rotated around the same center.
         Text: "100 Days of Design", within the black middle rectangle. Text: "Day 4" broken up into "Day" and "4", sitting on adjacent edges of the next outer layer.
-tags: ['#100DaysOfDesign', tech, work, meta]
+tags: [100DaysOfDesign', tech, work, meta]
 pubDate: 4.8.2022
 ---
 

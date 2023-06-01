@@ -5,7 +5,7 @@ image:
     alt: >
         Rectangles of red, like columns, with 3 little spaces between them that get progressively bigger. Or are the gaps in fact the columns that hold everything up? To the left, a slim canary yellow bar tilted, as if falling over.
         Text: "Day 3. 100 Days of Design"
-tags: ['#100DaysOfDesign', tech, meta]
+tags: [100DaysOfDesign', tech, meta]
 pubDate: 3.8.2022
 ---
 

@@ -5,7 +5,7 @@ image:
     url: /daycards/day-9.svg
     alt: >
         Text: '100 Days of Design. Day 9' The word 'Day' fell from the top and left behind a trail of itself in progressively lighter greys.
-tags: ['#100DaysOfDesign', resume, job, work]
+tags: [100DaysOfDesign', resume, job, work]
 pubDate: 9.8.2022
 ---
 

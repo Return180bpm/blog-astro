@@ -5,7 +5,7 @@ image:
     url: /daycards/day-5.svg
     alt: >
         Text: "Day 5. 100 Days of Design", cream colored, displayed in a neat little coal-black frame hanging on a reddish background, amidst impinging waves of yellow and cream.
-tags: ['#100DaysOfDesign', work]
+tags: [100DaysOfDesign', work]
 pubDate: 5.8.2022
 ---
 

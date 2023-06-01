@@ -4,7 +4,7 @@ image:
     url: /daycards/day-20.svg
     alt: >
         A background of columns of repeated text: 100 Days of Design. The text is clear at the top and bottom and gets sort of smudged towards the middle. Over this, a big golden circle with bold text: Day 20. Over this, two wavy sort of blobs, touching the edges of the image. The one in the upper-right: blue. The one in the lower left: blackish and spilling out of the bottom of the image.
-tags: ['#100DaysOfDesign']
+tags: [100DaysOfDesign']
 pubDate: 25.8.2022
 ---
 

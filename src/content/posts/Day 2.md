@@ -4,7 +4,7 @@ image:
     url: /daycards/day-2.svg
     alt: >
         A squarish light image with a light background, tearing open to reveal a yellowish underlayer. The tear going from the lower left corner diagonally to the right edge of the image. Text: In the upper left '100 Days of Design 1' - in a neutral rounded thin sans-serif type, in the lower left '100 Days of Design' - in a big bold flesh-colored type, interacting with the tear and the background to be partly outline, partly fully revealed
-tags: ['#100DaysOfDesign']
+tags: [100DaysOfDesign']
 pubDate: 2.8.2022
 ---
 

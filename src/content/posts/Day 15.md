@@ -5,7 +5,7 @@ image:
     url: /daycards/day-15.svg
     alt: >
         Three red and yellow dancing flame-like shapes on a black background extending upwards towards a purple circle with the text '100 Days of Design, Day 15'.
-tags: ['#100DaysOfDesign', tech, doubt]
+tags: [100DaysOfDesign', tech, doubt]
 pubDate: 15.8.2022
 ---
 
