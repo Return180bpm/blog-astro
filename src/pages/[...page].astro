@@ -18,7 +18,7 @@ const nextUrl = page.url.next
 
 <BaseLayout>
 	<main
-		class="max-w-min px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
+		class="overflow-x-hidden px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
 	>
 		{page.data.map((post) => {
 			return <BlogPost post={post} />

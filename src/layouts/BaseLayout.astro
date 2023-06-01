@@ -23,7 +23,7 @@ function getRandomInt(min, max) {
 		<title>{title}</title>
 	</head>
 	<body
-		class="grid place-content-center gap-12 font-sans text-stone-600 bg-light overflow-x-auto"
+		class="grid place-content-center gap-12 font-sans text-stone-600 bg-light"
 	>
 		<!-- <header
 			id="header-grid"
@@ -58,7 +58,13 @@ function getRandomInt(min, max) {
 				</a>
 			</div>
 		</header> -->
-
+		<header class="py-4">
+			<a href="/" class="p-4">
+				<h1 class="inline font-chonk font-black text-outline">
+					tom's blobs
+				</h1>
+			</a>
+		</header>
 		<slot />
 		<footer
 			class="w-full flex flex-col gap-8 bg-dark px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
