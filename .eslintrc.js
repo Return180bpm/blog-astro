@@ -1,7 +1,16 @@
 module.exports = {
 	rules: {
 		'@typescript-eslint/no-require-imports': 'off',
-		'@typescript-eslint/no-var-requires': 'off'
+		'@typescript-eslint/no-var-requires': 'off',
+		'no-unused-vars': 'off',
+		'@typescript-eslint/no-unused-vars': [
+			'error',
+			{
+				argsIgnorePattern: '^Props',
+				varsIgnorePattern: '^Props',
+				caughtErrorsIgnorePattern: '^Props'
+			}
+		]
 	},
 	env: {
 		node: true,
@@ -11,9 +20,9 @@ module.exports = {
 	plugins: ['@typescript-eslint', 'jsx-a11y'],
 	extends: [
 		'eslint:recommended',
-		'plugin:@typescript-eslint/recommended',
 		'plugin:astro/recommended',
-		'plugin:jsx-a11y/recommended'
+		'plugin:jsx-a11y/recommended',
+		'plugin:@typescript-eslint/recommended'
 	],
 	parser: '@typescript-eslint/parser',
 
