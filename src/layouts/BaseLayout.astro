@@ -8,6 +8,7 @@ const { description, title }: Props = Astro.props
 
 import Header from '@/components/Header.astro'
 import '../styles/global.css'
+import Footer from '@/components/Footer.astro'
 ---
 
 <!DOCTYPE html>
@@ -24,22 +25,6 @@ import '../styles/global.css'
 	>
 		<Header />
 		<slot />
-		<footer
-			class="w-full flex flex-col gap-8 bg-dark px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
-		>
-			<a href="https://www.100daysofx.com/" class=" text-light">
-				Learn about the #100DaysOfX thing
-			</a>
-			<div class="h-0 border border-b-light"></div>
-			<address class="flex flex-col-reverse items-end">
-				<a
-					rel="me"
-					href="https://uiuxdev.social/@toms"
-					class="text-light"
-				>
-					Toot with me
-				</a>
-			</address>
-		</footer>
+		<Footer />
 	</body>
 </html>
