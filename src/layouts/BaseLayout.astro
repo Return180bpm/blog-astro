@@ -1,5 +1,10 @@
 ---
-const title = "tom's blobs"
+export interface Props {
+	title: string
+	description: string
+}
+
+const { description, title }: Props = Astro.props
 
 import '../styles/global.css'
 ---
@@ -11,6 +16,7 @@ import '../styles/global.css'
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>{title}</title>
+		<meta name="description" content={description} />
 	</head>
 	<body
 		class="grid place-content-center gap-12 font-sans text-stone-600 bg-light"
