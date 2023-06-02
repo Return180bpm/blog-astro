@@ -24,7 +24,11 @@ import Footer from '@/components/Footer.astro'
 		class="grid place-content-center gap-12 font-sans text-stone-600 bg-light"
 	>
 		<Header />
-		<slot />
+		<main
+			class="overflow-x-hidden px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
+		>
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>

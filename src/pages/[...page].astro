@@ -20,13 +20,9 @@ const nextUrl = page.url.next
 	title="tom's blobs"
 	description="A blog where life is put on the grill until the juices run out and then you try to eat it but instead you burn your tongue to a sorry crisp and have to blog out your thoughts so you don't explode."
 >
-	<main
-		class="overflow-x-hidden px-4 prose-custom prose-md lg:prose-xl md:prose-lg prose-stone"
-	>
-		{page.data.map((post) => {
-			return <BlogPost post={post} />
-		})}
-	</main>
+	{page.data.map((post) => {
+		return <BlogPost post={post} />
+	})}
 
 	<nav
 		class=" flex flex-col justify-center items-center gap-6 mx-4 px-8 py-8 prose-custom prose-xl lg:prose-2xl prose-stone border-t-2 border-stone-700 "
