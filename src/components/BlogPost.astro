@@ -3,9 +3,10 @@ import { formatDateObjToCustom } from '@/utils'
 import type { CollectionEntry } from 'astro:content'
 interface Props {
 	post: CollectionEntry<'posts'>
+	isPartOfList: boolean
 }
 
-const { post } = Astro.props
+const { post, isPartOfList } = Astro.props
 const { title, description, image, tags, pubDate } = post.data
 const { Content } = await post.render()
 ---
@@ -25,7 +26,9 @@ const { Content } = await post.render()
 		class="mt-4 pt-2 flex flex-col gap-4 italic text-stone-500 border-t border-t-stone-400"
 	>
 		<span> Written on {formatDateObjToCustom(pubDate)}</span>
-		<a href={`/posts/${post.slug}`}>View post on own page</a>
+		{isPartOfList && (
+			<a href={`/posts/${post.slug}`}>View post on own page</a>
+		)}
 		<div class="flex flex-wrap gap-2">
 			{tags.map((tag) => (
 				<span class="px-3 py-2 bg-red bg-opacity-30 rounded-lg">

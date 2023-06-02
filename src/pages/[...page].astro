@@ -21,7 +21,7 @@ const nextUrl = page.url.next
 	description="A blog where life is put on the grill until the juices run out and then you try to eat it but instead you burn your tongue to a sorry crisp and have to blog out your thoughts so you don't explode."
 >
 	{page.data.map((post) => {
-		return <BlogPost post={post} />
+		return <BlogPost post={post} isPartOfList={true} />
 	})}
 
 	<nav
