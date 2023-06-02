@@ -6,6 +6,7 @@ export interface Props {
 
 const { description, title }: Props = Astro.props
 
+import Header from '@/components/Header.astro'
 import '../styles/global.css'
 ---
 
@@ -21,6 +22,7 @@ import '../styles/global.css'
 	<body
 		class="grid place-content-center gap-12 font-sans text-stone-600 bg-light"
 	>
+		<Header />
 		<slot />
 		<footer
 			class="w-full flex flex-col gap-8 bg-dark px-8 pb-8 pt-6 prose-custom prose-xl lg:prose-2xl prose-stone"
