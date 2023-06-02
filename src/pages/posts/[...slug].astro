@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content'
-import MarkdownPostLayout from '../../layouts/MarkdownPostLayout.astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import BlogPost from '@/components/BlogPost.astro'
 
@@ -16,8 +15,10 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props
+const title = post.data.title
+const description = post.data.description
 ---
 
-<BaseLayout>
+<BaseLayout {title} {description}>
 	<BlogPost {post} isPartOfList={false} />
 </BaseLayout>
