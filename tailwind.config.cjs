@@ -33,6 +33,7 @@ module.exports = {
 		},
 		colors: {
 			dark: 'hsl(var(--dark) / <alpha-value>)',
+			// beautiful as slight sepia site background: #FDFDF0
 			light: 'hsl(var(--light) / <alpha-value>)',
 			transparent: 'transparent',
 			current: 'currentColor',
