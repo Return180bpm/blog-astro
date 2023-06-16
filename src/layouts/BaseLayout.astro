@@ -21,7 +21,7 @@ const { description, pageTitle }: Props = Astro.props
 		{description && <meta name="description" content={description} />}
 	</head>
 	<body
-		class="grid place-content-center gap-12 font-sans text-stone-600 bg-light"
+		class="grid place-content-center gap-4 font-sans text-stone-600 bg-light"
 	>
 		<Header />
 		<main
@@ -29,6 +29,7 @@ const { description, pageTitle }: Props = Astro.props
 		>
 			<slot />
 		</main>
+		<slot name="nav" />
 		<Footer />
 	</body>
 </html>
