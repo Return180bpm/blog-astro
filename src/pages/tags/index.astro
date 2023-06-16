@@ -10,13 +10,15 @@ const pageTitle = 'Tag Index'
 ---
 
 <BaseLayout {pageTitle}>
-	<div class="tags">
-		{tags.map((tag) => (
-			<p class="tag">
-				<a class="tag-filled" href={`/tags/${tag}`}>
-					{tag}
-				</a>
-			</p>
-		))}
+	<div>
+		<ul class="grid gap-1">
+			{tags.map((tag) => (
+				<li>
+					<a class="tag-filled" href={`/tags/${tag}`}>
+						{tag}
+					</a>
+				</li>
+			))}
+		</ul>
 	</div>
 </BaseLayout>
