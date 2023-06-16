@@ -26,7 +26,8 @@ const posts: CollectionEntry<"posts">[] = Astro.props.posts
 ---
 
 <BaseLayout pageTitle={`tag: ${tag!}`}>
-    <p>Posts tagged with {tag}</p>
+  <a href="/tags">See all tags</a>
+    <h2>Posts tagged with <span class="font-mono">{tag}</span></h2>
     <ul>
         { posts.map((post) => <BlogPost {post} isPartOfList={true} />) }
     </ul>

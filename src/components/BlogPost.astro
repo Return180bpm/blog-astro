@@ -31,10 +31,7 @@ const { Content } = await post.render()
 		)}
 		<div class="flex flex-wrap gap-2">
 			{tags.map((tag) => (
-				<a
-					class="prose-sm px-3 py-2 bg-red bg-opacity-30 rounded-lg font-mono"
-					href={`/tags/${tag}`}
-				>
+				<a class="tag-filled" href={`/tags/${tag}`}>
 					{tag}
 				</a>
 			))}
