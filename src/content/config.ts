@@ -16,7 +16,15 @@ const postsCollection = defineCollection({
         author: z.string().default('Tom'),
         tags: z.array(z.coerce.string()),
         footnote: z.string().optional(),
-        pubDate: z.coerce.string().transform(convertGermanToISODate).pipe(z.date())
+        pubDate: z.coerce.string().transform(convertGermanToISODate).pipe(z.date()).optional()
+    }).superRefine(({ isDraft, pubDate }, ctx) => {
+        if (!isDraft && pubDate === undefined) {
+            ctx.addIssue({
+                code: "custom",
+                message: "pubDate is required when it's not a draft :)",
+                path: ["pubDate"]
+            });
+        }
     })
 });
 // Export a single `collections` object to register your collection(s)
