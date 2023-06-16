@@ -46,7 +46,17 @@ module.exports = {
 		fontFamily: {
 			sans: ['Arial', 'sans-serif'],
 			chonk: ['"Arial Black"', 'sans-serif'],
-			serif: ['Merriweather', 'serif']
+			serif: ['Merriweather', 'serif'],
+			mono: [
+				'ui-monospace',
+				'SFMono-Regular',
+				'Menlo',
+				'Monaco',
+				'Consolas',
+				'Liberation Mono',
+				'Courier New',
+				'monospace'
+			]
 		}
 	},
 	plugins: [require('@tailwindcss/typography')]

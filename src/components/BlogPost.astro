@@ -31,9 +31,12 @@ const { Content } = await post.render()
 		)}
 		<div class="flex flex-wrap gap-2">
 			{tags.map((tag) => (
-				<span class="px-3 py-2 bg-red bg-opacity-30 rounded-lg">
-					<a href={`/tags/${tag}`}>{tag}</a>
-				</span>
+				<a
+					class="prose-sm px-3 py-2 bg-red bg-opacity-30 rounded-lg font-mono"
+					href={`/tags/${tag}`}
+				>
+					{tag}
+				</a>
 			))}
 		</div>
 	</footer>
