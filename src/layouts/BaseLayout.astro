@@ -4,11 +4,11 @@ import Footer from '@/components/Footer.astro'
 import '../styles/global.css'
 
 interface Props {
-	title: string
+	pageTitle: string
 	description?: string
 }
 
-const { description, title }: Props = Astro.props
+const { description, pageTitle }: Props = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ const { description, title }: Props = Astro.props
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>{title}</title>
+		<title>{pageTitle}</title>
 		{description && <meta name="description" content={description} />}
 	</head>
 	<body
