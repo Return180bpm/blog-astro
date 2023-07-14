@@ -406,6 +406,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"before a hike.md": {
+	id: "before a hike.md";
+  slug: "before-a-hike-prayer";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "drafts/Day 20-copy - frontend frustration.md": {
 	id: "drafts/Day 20-copy - frontend frustration.md";
   slug: "Frontend-frustration";
@@ -423,6 +430,27 @@ declare module 'astro:content' {
 "drafts/a-longing.md": {
 	id: "drafts/a-longing.md";
   slug: "a-longing";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"drafts/dearth and abundance.md": {
+	id: "drafts/dearth and abundance.md";
+  slug: "dearth";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"drafts/the ant and the grasshoper.md": {
+	id: "drafts/the ant and the grasshoper.md";
+  slug: "ant";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"drafts/unrest.md": {
+	id: "drafts/unrest.md";
+  slug: "lost";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
