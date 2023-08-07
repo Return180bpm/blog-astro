@@ -26,13 +26,13 @@ and give me the energy
 to do whatever I'm doing.  
 
 Taking a slow bite  
-can be a fun thing to do,  
-tasting, feeling  
+can be fun:  
+taste and feel  
 \- that's it.   
 
 I could even  
 think about where this food came from...  
-but that can lead to big things,  
+but that can lead to big thoughts,  
 and big changes in consciousness, indeed.   
 
 I might even not take  
