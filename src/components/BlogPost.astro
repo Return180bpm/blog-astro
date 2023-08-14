@@ -12,7 +12,10 @@ const { Content } = await post.render()
 ---
 
 <article class="mt-48 first-of-type:mt-0 flex flex-col gap-0">
-	<h2 id={title} class=" sm:text-4xl md:text-6xl lg:text-8xl !mt-0">
+	<h2
+		id={title}
+		class=" sm:text-3xl md:text-4xl lg:text-5xl font-bold  !mt-0"
+	>
 		<a href={`#${title}`}>{title}</a>
 	</h2>
 	{description ? (
