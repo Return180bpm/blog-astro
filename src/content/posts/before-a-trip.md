@@ -1,8 +1,8 @@
 ---
 isDraft: false
-title: before a hike
-slug: before-a-hike-prayer
-tags: [prayer, hiking]
+title: before a trip
+slug: before-a-trip-prayer
+tags: [prayer, travel, hiking]
 pubDate: 14.7.2023
 ---
 
