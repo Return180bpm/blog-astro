@@ -9,7 +9,7 @@ I sit on the balcony with the wind moving through the trees. I hear the leaves, 
 
 A vision of a rupture on a black canvas: a gash of colors and lights, like a nebula, where stars are born. I feel like I've been sitting under the stars on a warm summer night, in awe. That has been sort of the mood here.
 
-\*\*\*
+<p style="text-align: center">***<\p>
 
 I sit in the kitchen and smoke. The dishwasher is running with a soothing rhythm. Pumping water, probably. Spraying the dishes, I imagine. Nobody can say for certain. The dishwasher performs its function behind closed doors. Nobody has ever seen what goes on while it's on (same as with fridges). It lives a life of unseen service. I like to think it is content, nonetheless, to do its job well and renew our culinary paraphernalia to be clean and fresh, again.
 
