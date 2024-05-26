@@ -9,7 +9,7 @@ I sit on the balcony with the wind moving through the trees. I hear the leaves, 
 
 A vision of a rupture on a black canvas: a gash of colors and lights, like a nebula, where stars are born. I feel like I've been sitting under the stars on a warm summer night, in awe. That has been sort of the mood here.
 
-<p style="text-align: center">***<\p>
+<p style='text-align: center;'>***</p>
 
 I sit in the kitchen and smoke. The dishwasher is running with a soothing rhythm. Pumping water, probably. Spraying the dishes, I imagine. Nobody can say for certain. The dishwasher performs its function behind closed doors. Nobody has ever seen what goes on while it's on (same as with fridges). It lives a life of unseen service. I like to think it is content, nonetheless, to do its job well and renew our culinary paraphernalia to be clean and fresh, again.
 
@@ -21,7 +21,7 @@ I sense strength and courage, springing from a fresh source I have no word for: 
 
 In a sense, I feel as naked as a baby, my little heart aflutter, surrounded by everything, in quiet awe, alive.
 
----
+<p style='text-align: center;'>***</p>
 
 In the kitchen, again. Surfacing for a moment from the stream of 10000 things. I dived into the old hussle, swam among my issues, dealt with problems. The Feeling changes, softens. I do not lament it (yet), recognizing that it is futile to hold on to it in this way. But now, when I surface and try to come back to it, it is still here: in the silence. I am grateful.
 
@@ -33,11 +33,11 @@ Thoughts and feelings also have a directionality in time. This feels like joy fo
 
 I imagine myself in the future, thinking back to the two nights with You. This brings a sense of being a child, funny enough. Little children, all of us -- naked and furious, often scared, living on heuristics. Stuck with this process of making sense of confusion, sifting, distilling, combining. Clarity? Catharsis? Transcendence? I'm not sure about any of them. Here, and there, maybe, in grams. I don't buy them wholesale. Now, in this image of future recollection of our loving and connection, I feel a visceral fear: _there is nothing in this but what I make of it_. Transience and responsibility in loving. Sad and terrified knowing that an end is there, to everything; sensing that there is a task -- maybe the most important task -- to ease suffering, to spread love, to remember, to remember as long as possible and to act on it against all odds; and a deep insecurity: I can(not) do it.
 
----
+<p style='text-align: center;'>***</p>
 
 After a scorching day of labor, every vein running dry, I'm left with sadness and the wish to sleep and regenerate. I imagine your face. A sliver of a smile. Love (what better word?) breaks through the miles of ocean, echoing, bubbling up, suffusing and soothing me. You and my other Lover, smiling at me gently. I am grateful. Somewhere, I know that everything will be alright. And somehow, thrumming underneath it, an echo of an ending. Almost always I rub up against this when I ponder my loved ones. It seems to be woven into these thoughts, or into me.
 
----
+<p style='text-align: center;'>***</p>
 
 Late sunday morning. Hungover, pressure in my head, flesh and spirit tender. I woke up distressed. heavy and tired. last night i caught just enough sleep to feel how tired i really am.
 
